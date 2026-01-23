@@ -1,5 +1,5 @@
 {
-  "name": "versent-development-layout1",
+  "name": "my-site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.2.4"
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "vite": "npm:rolldown-vite@7.2.5"
   },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "tailwindcss": "^4.1.18"
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.2.5"
   }
 }
