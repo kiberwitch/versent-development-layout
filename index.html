@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/versent.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>Versent</title>
 
@@ -18,8 +21,46 @@
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
+    <div class="mx-auto max-w-[1236px]">
+      <div class="">
+        <header class="py-2 px-6 rounded-2xl shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_7px_7px_0_rgba(0,0,0,0.09),0_16px_10px_0_rgba(0,0,0,0.05),0_29px_12px_0_rgba(0,0,0,0.01),0_45px_13px_0_rgba(0,0,0,0),0_-4px_12px_0_rgba(0,0,0,0.05)] mt-[77px]">
+          <div class="flex justify-between items-center">
+            <a href="#" class="flex gap-4 items-center">
+              <img src="src/assets/img/icons/versent.svg" alt="versent-icon">
+              <img src="src/assets/img/icons/Versent-icon.svg" alt="versent">
+            </a>
 
+            <div class="header__middle">
+              <nav>
+                <ul class="flex gap-8 items-center font-light font-montserrat text-[#6C757D] text-[16px]">
+                  <li><a href="#">Уроки</a></li>
+                  <li><a href="#">Код</a></li>
+                  <li><a href="#">Эффекты</a></li>
+                  <li><a href="#">Демо</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="flex justify-between gap-8 items-center">
+              <form role="search">
+                <label class="relative">
+                  <input type="search" placeholder="Поиск..." class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-montserrat placeholder:font-light placeholder:text-[15px] font-montserrat text-[15px] pr-[36px]">
+                  <img src="src/assets/img/icons/search.svg" alt="search" class="absolute right-[10px] top-[4px] pointer-events-none">
+                </label>
+              </form>
+              <div class="flex flex-col gap-[6px] cursor-pointer">
+                <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main>
 
+        </main>
+      </div>
+    <footer></footer>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
