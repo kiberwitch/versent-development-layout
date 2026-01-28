@@ -15,3 +15,21 @@ input:focus,
 textarea:focus {
   outline: none;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+/* Custom styles to not to repeat too many times */
+@layer components {
+  .custom_style-1 {
+    @apply
+      px-[19px]
+      py-[2px]
+      border
+      border-[#5E5E5E]
+      rounded-[30px]
+      cursor-pointer;
+  }
+}

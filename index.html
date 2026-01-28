@@ -20,19 +20,17 @@
     <meta property="og:image" content="ЗАПОЛНИТЬ: полный URL картинки для превью (1200x630)" />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body>
-    <div class="mx-auto max-w-[1236px]">
-      <div class="">
-        <header class="py-2 px-6 rounded-2xl shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_7px_7px_0_rgba(0,0,0,0.09),0_16px_10px_0_rgba(0,0,0,0.05),0_29px_12px_0_rgba(0,0,0,0.01),0_45px_13px_0_rgba(0,0,0,0),0_-4px_12px_0_rgba(0,0,0,0.05)] mt-[77px]">
+  <body class="font-montserrat" style="background: image-set(url(src/assets/img/bg/BG.webp) 1x, url(src/assets/img/bg/BG.png) 1x), linear-gradient(180deg, #e0fffc 0%, #f5fffe 2.88%); background-repeat: no-repeat; background-position: top; background-size: cover;">
+      <div class="mx-auto max-w-[1236px]">
+        <header class="py-2 px-6 rounded-2xl shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_7px_7px_0_rgba(0,0,0,0.09),0_16px_10px_0_rgba(0,0,0,0.05),0_29px_12px_0_rgba(0,0,0,0.01),0_45px_13px_0_rgba(0,0,0,0),0_-4px_12px_0_rgba(0,0,0,0.05)] mt-[77px] bg-white">
           <div class="flex justify-between items-center">
             <a href="#" class="flex gap-4 items-center">
               <img src="src/assets/img/icons/versent.svg" alt="versent-icon">
               <img src="src/assets/img/icons/Versent-icon.svg" alt="versent">
             </a>
-
-            <div class="header__middle">
+            <div>
               <nav>
-                <ul class="flex gap-8 items-center font-light font-montserrat text-[#6C757D] text-[16px]">
+                <ul class="flex gap-8 items-center font-light text-[#6C757D] text-[16px]">
                   <li><a href="#">Уроки</a></li>
                   <li><a href="#">Код</a></li>
                   <li><a href="#">Эффекты</a></li>
@@ -41,10 +39,10 @@
               </nav>
             </div>
             <div class="flex justify-between gap-8 items-center">
-              <form role="search">
+              <form role="search" action="/search" method="get" role="search">
                 <label class="relative">
-                  <input type="search" placeholder="Поиск..." class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-montserrat placeholder:font-light placeholder:text-[15px] font-montserrat text-[15px] pr-[36px]">
-                  <img src="src/assets/img/icons/search.svg" alt="search" class="absolute right-[10px] top-[4px] pointer-events-none">
+                  <input type="search" placeholder="Поиск..." class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-montserrat placeholder:font-light placeholder:text-[15px] text-[15px] pr-[36px]">
+                  <img src="src/assets/img/icons/search.svg" alt="search" class="absolute right-[10px] top-[2px] pointer-events-none">
                 </label>
               </form>
               <div class="flex flex-col gap-[6px] cursor-pointer">
@@ -55,12 +53,156 @@
             </div>
           </div>
         </header>
-        <main>
-
+        <main class="[box-shadow:0_8px_17px_0_rgba(0,_0,_0,_0.05),_0_31px_31px_0_rgba(0,_0,_0,_0.04),_0_71px_42px_0_rgba(0,_0,_0,_0.03),_0_126px_50px_0_rgba(0,_0,_0,_0.01),_0_196px_55px_0_rgba(0,_0,_0,_0)] bg-[#fafafa] rounded-3xl pb-6 mb-16">
+          <section class="min-h-screen mt-[63px] shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_7px_7px_0_rgba(0,0,0,0.09),0_16px_10px_0_rgba(0,0,0,0.05),0_29px_12px_0_rgba(0,0,0,0.01),0_45px_13px_0_rgba(0,0,0,0),0_-4px_12px_0_rgba(0,0,0,0.05)] rounded-t-3xl" style="background-image: url(src/assets/img/bg/section1-bg.jpg);background-image: image-set(url(src/assets/img/bg/section1-bg.webp) 1x, url(src/assets/img/bg/section1-bg.jpg) 1x);background-position: center;background-repeat: no-repeat;background-size: cover;">
+            <div class="relative w-[718px] mx-auto">
+              <h1 class="font-semibold text-[48px] tracking-[-0.03em] text-center text-[#212529] pt-[196px] relative z-10">Продвинутые техники в Tilda</h1>
+              <div class="absolute z-0 top-[77%] right-[-5px] [box-shadow:1px_1px_1px_0_rgba(0,_0,_0,_0.6)] bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)] rotate-[4deg] w-[125px] h-[48px]"></div>
+            </div>
+            <a href="#" class="block w-[322px] mx-auto mt-[13px] text-[24px] text-[#212529] text-center px-[31px] py-[11px] border-[1px] border-[#212529] rounded-[15px] cursor-pointer hover:bg-[#212529] hover:text-white transition-colors duration-75">Смотреть решения 
+               <svg width="11" height="10" viewBox="0 0 11 10" fill="currentColor" class="inline hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.256 9.4561L8.352 4.7041L5.256 0.000103235H6.864L10.08 4.7041L6.864 9.4561H5.256ZM-9.53674e-07 5.3761V4.0561H8.712V5.3761H-9.53674e-07Z"/>
+              </svg>
+            </a>
+            <div class="flex flex-wrap gap-1 justify-center mt-[88px] max-w-[1000px] text-[#6C757D] text-[14px] mx-auto text-center pb-12">
+              <div class="custom_style-1">Фон-видео</div>
+              <div class="custom_style-1">Zero-каталог</div>
+              <div class="custom_style-1">Якоря</div>
+              <div class="custom_style-1">Курсор-дым</div>
+              <div class="custom_style-1">Обводка</div>
+              <div class="custom_style-1">Адаптивные отступы</div>
+              <div class="custom_style-1">Ценовой диапазон</div>
+              <div class="custom_style-1">Поиск по каталогу</div>
+              <div class="custom_style-1">Blur-слайды</div>
+              <div class="custom_style-1">Zoom-слайд</div>
+              <div class="custom_style-1">Параллакс</div>
+              <div class="custom_style-1">Зум-ховер</div>
+              <div class="custom_style-1">и т.д.</div>
+            </div>
+          </section>
+          <section class="px-6" style="background-image: url(src/assets/img/ill/Vector.svg); background-repeat: no-repeat; background-position: 20px 9px;">
+            <h2 class="text-[32px] text-[#212529] my-6" ><span class="inline-block font-bold  italic">Полезные</span> модификации для тильды:</h2>
+            <div class="flex flex-wrap gap-4 justify-between">
+              <div class="rounded-2xl [box-shadow:0_4px_8px_0_rgba(0,_0,_0,_0.1),_0_15px_15px_0_rgba(0,_0,_0,_0.09),_0_35px_21px_0_rgba(0,_0,_0,_0.05),_0_62px_25px_0_rgba(0,_0,_0,_0.01),_0_97px_27px_0_rgba(0,_0,_0,_0)] h-[253px] w-full relative" style="background: url(src/assets/img/ill/2.png), linear-gradient(-15deg, rgba(140, 140, 140, 1) 0%, #fff 20%); background-repeat: no-repeat;background-position: right bottom;">
+                <div class="pt-[31px] pl-[30px]">
+                  <h3 class="font-semibold text-[24px] text-[#212529] mb-[30px]">Кастомные блоки с контентом</h3>
+                  <p class="font-medium text-[16px] text-[#222222]">Полный контроль над стилем, фильтрами и пагинацией.<br> Синхронизация с Tilda Store.</p>
+                </div>
+                <a href="#" class="bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)] rounded-tr-[16px] rounded-bl-[16px] px-[45px] py-[15px] text-white font-semibold text-[20px] absolute bottom-0 left-0">Смотреть демо <img class="inline" src="src/assets/img/icons/white-arrow.svg" alt="arrow"></a>
+              </div>
+              <div class="rounded-2xl [box-shadow:0_4px_8px_0_rgba(0,_0,_0,_0.1),_0_15px_15px_0_rgba(0,_0,_0,_0.09),_0_35px_21px_0_rgba(0,_0,_0,_0.05),_0_62px_25px_0_rgba(0,_0,_0,_0.01),_0_97px_27px_0_rgba(0,_0,_0,_0)] bg-[linear-gradient(326deg,_#8c8c8c_0%,_#fff_100%)] h-[285px] w-[49%] relative" style="background: url(src/assets/img/ill/1.png), linear-gradient(326deg, rgba(140, 140, 140, 1) 0%, #fff 20%); background-repeat: no-repeat;background-position: right bottom;">
+                <div class="pt-[31px] pl-[30px]">
+                  <h3 class="font-semibold text-[24px] text-[#212529] mb-[30px]">Загрузка видео больше 10 МБ</h3>
+                  <p class="font-medium text-[16px] text-[#222222]">Загружай 4K-ролики без хостингов. <br> Работает даже на бесплатном тарифе.</p>
+                </div>
+                <a href="#" class="bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)] rounded-tr-[16px] rounded-bl-[16px] px-[45px] py-[15px] text-white font-semibold text-[20px] absolute bottom-0 left-0">Читать гайд <img class="inline" src="src/assets/img/icons/white-arrow.svg" alt="arrow"></a>
+              </div>
+              <div class="rounded-2xl [box-shadow:0_4px_8px_0_rgba(0,_0,_0,_0.1),_0_15px_15px_0_rgba(0,_0,_0,_0.09),_0_35px_21px_0_rgba(0,_0,_0,_0.05),_0_62px_25px_0_rgba(0,_0,_0,_0.01),_0_97px_27px_0_rgba(0,_0,_0,_0)] bg-[linear-gradient(326deg,_#8c8c8c_0%,_#fff_100%)] h-[285px] w-[49%] relative" style="background: url(src/assets/img/ill/3.png), linear-gradient(326deg, rgba(140, 140, 140, 1) 0%, #fff 20%); background-repeat: no-repeat;background-position: right bottom;">
+                <div class="pt-[31px] pl-[30px]">
+                  <h3 class="font-semibold text-[24px] text-[#212529] mb-[30px]">Интерактивный элементы и анимации</h3>
+                  <p class="font-medium text-[16px] text-[#222222]">Анимации, которые цепляют и не <br> ломают Tilda.</p>
+                </div>
+                <a class="bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)] rounded-tr-[16px] rounded-bl-[16px] px-[45px] py-[15px] text-white font-semibold text-[20px] absolute bottom-0 left-0" href="#">Попробовать <img class="inline" src="src/assets/img/icons/white-arrow.svg" alt="arrow"></a>
+              </div>
+            </div>
+          </section>
+          <section class="px-6 mt-12">
+            <div class="h-[263px] flex justify-between items-center pl-6 border border-black/15 rounded-[16px] shadow-[0_4px_8px_0_rgba(0,0,0,0.1),0_15px_15px_0_rgba(0,0,0,0.09),0_35px_21px_0_rgba(0,0,0,0.05),0_62px_25px_0_rgba(0,0,0,0.01),0_97px_27px_0_rgba(0,0,0,0)]">
+              <div class="flex flex-col gap-[30px] items-start">
+                <h3 class="font-semibold text-[24px] text-[#212529]">Прокачаем выхлоп за 1 день</h3>
+                <p class="font-medium text-[16px] text-[#222222]">Скидка -15%. Гарантия 2 года. <br> Расчет 1 мин</p>
+                <a class="rounded-[16px] px-[46px] py-[12px] bg-[rgba(0,_187,_255,_0.15)] font-medium text-[18px] text-[#57a5ff]" href="#">Подробнее <img class="inline" src="src/assets/img/icons/blue-arrow.svg" alt="arrow"></a>
+              </div>
+              <div class="relative w-[40%] h-full  bg-cover bg-center bg-no-repeat rounded-tr-[16px] rounded-br-[16px]" style="      background-image: url('/src/assets/img/bg/adverb-bg.jpg');
+              background-image: image-set(
+                  url('/src/assets/img/bg/adverb-bg.webp') 1x,
+                  url('/src/assets/img/bg/adverb-bg.jpg') 1x);">
+                <a class="rounded-[32px] px-[7px] py-[3px] bg-[rgba(255,_255,_255,_0.45)] font-normal text-[12px] text-[#3a3a3a] absolute bottom-[16px] right-[14px]" href="#">Реклама</a>
+              </div>
+            </div>
+          </section>
+          <section class="px-6 mt-12">
+            <div class="border-[1.28px] border-[solid] border-[#d9d9d9] rounded-[8px] px-[37px] py-[25px] flex relative">
+              <div class="flex flex-col justify-between gap-8 items-start">
+                <h2 class="font-semibold text-[32px] text-[#212529]">Поддержать проект</h2>
+                <p class="font-normal text-[20px] text-[#222]">Если статья помогла — вы можете поблагодарить любой <br> суммой. Это мотивирует писать больше таких гайдов!</p>
+                <form>
+                  <fieldset class="flex gap-[7px] font-normal text-[24px] text-[#000]">
+                    <legend class="sr-only">Выберите сумму поддержки</legend>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="amount" value="100" class="peer sr-only">
+                      <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        100 ₽
+                      </span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="amount" value="300" class="peer sr-only">
+                      <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        300 ₽
+                      </span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="amount" value="500" class="peer sr-only">
+                      <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        500 ₽
+                      </span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="amount" value="custom" class="peer sr-only">
+                      <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        Своя сумма
+                      </span>
+                    </label>
+                  </fieldset>
+                </form>
+                <a class="rounded-[12px] px-[36px] py-[12px] font-medium text-[24px] text-[#fff] bg-black" href="#">Поблагодарить</a>
+              </div>
+              <div>
+                <img class="absolute right-[-63px] h-[80%]" src="src/assets/img/ill/heart.png" alt="heart">
+              </div>
+            </div>
+          </section>
         </main>
       </div>
-    <footer></footer>
-    </div>
+      <footer class="py-[55px] bg-white">
+        <div class="mx-auto max-w-[1236px]">
+          <div class="flex justify-between w-full max-w-[1200px] mx-auto">
+            <section class="flex flex-col items-start gap-4 font-light text-[14px] px-[64px] border-r-[1px] border-[#D9D9D9]">
+              <img src="src/assets/img/icons/versent.svg" alt="Versent">
+              <p class="text-black">© 2025 Versent. <br> Все права защищены.</p>
+              <p class="text-[#6C757D]">Icons by Icons8</p>
+            </section>
+            <section class="px-[64px] border-r-[1px] border-[#D9D9D9]">
+              <h2 class="font-medium text-[18px] text-[#222222] mb-4 pr-[54px]">Навигация</h2>
+              <nav>
+                <ul class="text-[14px] text-black pl-[7px]">
+                  <li><a href="#">Главная</a></li>
+                  <li><a href="#">Статьи</a></li>
+                  <li><a href="#">Проекты</a></li>
+                  <li><a href="#">Модификации</a></li>
+                  <li><a href="#">Документация</a></li>
+                  <li><a href="#">Блог</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </nav>
+            </section>
+            <section class="px-[64px] border-r-[1px] border-[#D9D9D9]">
+              <h2 class="font-medium text-[18px] text-[#222222] mb-4 pr-[54px]">Кастомные блоки</h2>
+              <ul class="text-[14px] text-black pl-[7px]">
+                <li>Кастомный каталог</li>
+                <li>Кастомные карточки</li>
+                <li>Изменения корзины</li>
+              </ul>
+            </section>
+            <section class="px-[64px]">
+              <h2 class="font-medium text-[18px] text-[#222222] mb-4 pr-[54px]">Контакты</h2>
+              <address class="text-[14px] text-black not-italic pl-[7px]">
+                <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+              </address>
+            </section>
+          </div>
+        </div>
+      </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
