@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tilda-word {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 47px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.tilda-word::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.6);
+  background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);
+  transform: rotate(5deg);
+}
+ 

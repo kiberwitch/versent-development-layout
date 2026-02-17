@@ -4,14 +4,358 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/src/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>versent-development-layout</title>
   </head>
-  <body class="bg-red-50">
-    <div class="min-h-screen flex items-center justify-center">
-      <h1 class="w-[200px] text-black text-2xl text-center line-through">
-        Hello World
-      </h1>
+  <body>
+    <div
+      class="relative min-h-dvh overflow-hidden bg-gradient-to-b from-sky-50 via-white to-slate-50 text-slate-900"
+      style="
+        background-image: url('/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20(11).png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+      "
+    >
+      <div class="pointer-events-none absolute -left-28 top-28 h-72 w-72 rounded-full bg-indigo-300/30 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full bg-sky-300/30 blur-3xl"></div>
+      <div class="pointer-events-none absolute -left-36 bottom-24 h-96 w-96 rounded-full bg-purple-300/25 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-32 bottom-8 h-96 w-96 rounded-full bg-blue-300/25 blur-3xl"></div>
+
+      <header class="relative">
+        <div class="mx-auto max-w-[1236px] px-4 pt-4">
+          <div
+            class="relative flex items-center justify-between rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur"
+          >
+            <div class="flex items-center gap-3">
+              <img src="/icon.png" alt="Логотип" class="h-7 w-7 shrink-0" loading="eager" />
+              <a href="/" class="text-base font-medium tracking-tight">Versent</a>
+            </div>
+
+            <nav
+              aria-label="Основная навигация"
+              class="absolute left-1/2 hidden -translate-x-1/2 items-center justify-center gap-8 text-sm text-slate-500 sm:flex"
+            >
+              <a href="#lessons" class="hover:text-slate-900">Уроки</a>
+              <a href="#mods" class="hover:text-slate-900">Код</a>
+              <a href="#effects" class="hover:text-slate-900">Эффекты</a>
+              <a href="#demo" class="hover:text-slate-900">Демо</a>
+            </nav>
+
+            <div class="hidden items-center gap-4 sm:flex">
+              <div class="relative flex items-center">
+                <input
+                  aria-label="Поиск"
+                  placeholder="Поиск..."
+                  class="h-7 w-60 border-y border-slate-300 bg-transparent px-2 pr-8 text-sm text-slate-700 outline-none placeholder:text-slate-400"
+                />
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-500"
+                >
+                  ⌕
+                </span>
+              </div>
+
+              <button type="button" aria-label="Открыть меню" class="grid h-9 w-10 place-items-center">
+                <span class="grid gap-1">
+                  <span class="h-0.5 w-6 rounded bg-slate-700"></span>
+                  <span class="h-0.5 w-6 rounded bg-slate-700"></span>
+                  <span class="h-0.5 w-6 rounded bg-slate-700"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="relative mx-auto max-w-[1236px] px-4 pb-12 pt-6">
+        <section
+          aria-labelledby="hero-title"
+          class="relative mt-5 overflow-hidden rounded-3xl border border-slate-200/60 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.14)]"
+          style="background-image: url('/ARBITA_%D0%A0%D0%B5%D0%BD%D0%B4%D0%B5%D1%80_002%201.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+        >
+          <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.22),transparent_55%),radial-gradient(ellipse_at_bottom,rgba(99,102,241,0.10),transparent_55%)]"
+          ></div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-white/30"></div>
+
+          <div class="pointer-events-none absolute -left-2 top-12 h-16 w-24 -rotate-12 rounded-2xl bg-white/25"></div>
+
+          <img
+            src="/searching%20for%20a%20file%20in%20a%20folder%20(1).png"
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute -left-4 top-6 w-36 -rotate-0 opacity-80 sm:left-0 sm:top-0 sm:w-52"
+            loading="lazy"
+          />
+          <img
+            src="/Stock%20trading%20online%20on%20stock%20market.png"
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute -bottom-6 -right-6 w-40 rotate-0 opacity-80 sm:bottom-0 sm:right-0 sm:w-60"
+            loading="lazy"
+          />
+
+          <div class="relative flex min-h-[420px] flex-col items-center justify-center px-5 py-12 sm:px-10 sm:py-16">
+            <h1 id="hero-title" class="text-center text-3xl font-semibold leading-tight text-slate-900 sm:text-5xl">
+              Продвинутые техники в
+              <span class="relative inline-block">
+                <span class="tilda-bg" aria-hidden="true"></span>
+                <span class="tilda-word">Tilda</span>
+              </span>
+            </h1>
+
+            <a
+              href="/big-video.html"
+              class="mt-6 inline-flex items-center justify-center rounded-full border border-slate-400/70 bg-white/55 px-10 py-2.5 text-sm font-medium text-slate-800 shadow-sm backdrop-blur hover:bg-white"
+            >
+              Смотреть решения →
+            </a>
+
+            <div class="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-2" aria-label="Теги">
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Фон-видео</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Zero-каталог</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Якоря</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Курсор-дым</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Обводка</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Адаптивные отступы</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Ценовой диапазон</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Поиск по каталогу</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Blur-слайды</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Zoom-слайд</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Параллакс</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">Зум-ховер</span>
+              <span class="rounded-full border border-slate-400/60 bg-white/25 px-3 py-1 text-[12px] font-medium leading-none text-slate-600">и т.д.</span>
+            </div>
+          </div>
+        </section>
+
+      
+
+        <div class="mt-8 rounded-3xl border border-slate-200/60 bg-white p-6 shadow-[0_25px_70px_rgba(15,23,42,0.14)]">
+          <section id="mods">
+            <h2 class="text-xl font-medium leading-tight text-slate-900">
+              <span class="relative inline-block italic">
+                <span class="pointer-events-none absolute -left-1 -top-1 z-0 origin-left scale-75" aria-hidden="true">
+                  <svg width="170" height="40" viewBox="0 0 226 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.14881 28.5849C65.5033 36.2215 168.984 30.9103 195.887 23.9743C218.454 18.1563 215.77 1.26096 109.597 1.26099C-17.7742 1.26102 -30.2705 26.2728 58.6372 28.5849C147.545 30.8969 208.288 29.846 224.262 10.7193"
+                      stroke="url(#paint0_linear_1_1707)"
+                      stroke-width="2.5222"
+                      stroke-linecap="round"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_1_1707"
+                        x1="1.26172"
+                        y1="16.7958"
+                        x2="224.262"
+                        y2="16.7958"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#00FFC4" />
+                        <stop offset="1" stop-color="#00BBFF" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <span class="relative z-10">Полезные</span>
+              </span>
+              <span class="font-normal">модификации для тильды:</span>
+            </h2>
+
+            <div class="mt-4 grid gap-4">
+              <article class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+                <a
+                  href="/custom-blocks.html"
+                  class="absolute bottom-0 left-0 z-10 inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white shadow-[0_12px_22px_rgba(6,182,212,0.35)]"
+                  style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); border-top-right-radius: 14px"
+                >
+                  Смотреть демо →
+                </a>
+
+                <div class="grid gap-4 sm:grid-cols-[1fr_260px] sm:items-stretch">
+                  <div class="relative flex flex-col p-6 pb-14">
+                    <h3 class="text-base font-semibold text-slate-900">Кастомные блоки с контентом</h3>
+                    <p class="mt-3 max-w-md text-sm leading-snug text-slate-600">
+                      Полный контроль над стилем, фильтрами и пагинацией. Синхронизация с Tilda Store.
+                    </p>
+                  </div>
+
+                  <div class="relative">
+                    <img src="/2.png" alt="Кастомные блоки с контентом" class="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                </div>
+              </article>
+
+              <div class="grid gap-4 md:grid-cols-2">
+                <article class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+                  <a
+                    href="#"
+                    class="absolute bottom-0 left-0 z-10 inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white shadow-[0_12px_22px_rgba(6,182,212,0.35)]"
+                    style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); border-top-right-radius: 14px"
+                  >
+                    Читать гайд →
+                  </a>
+
+                  <div class="grid gap-4 sm:grid-cols-[1fr_250px] sm:items-stretch">
+                    <div class="relative flex flex-col p-6 pb-14">
+                      <h3 class="text-base font-semibold text-slate-900">Загрузка видео больше 10 МБ</h3>
+                      <p class="mt-3 text-sm leading-snug text-slate-600">Загружай 4K-ролики без хостинга. Работает даже в бесплатном тарифе.</p>
+                    </div>
+
+                    <img src="/1.png" alt="Загрузка видео больше 10 МБ" class="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                </article>
+
+                <article class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+                  <a
+                    href="/interactive.html"
+                    class="absolute bottom-0 left-0 z-10 inline-flex items-center justify-center px-10 py-3.5 text-base font-bold text-white shadow-[0_12px_22px_rgba(6,182,212,0.35)]"
+                    style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); border-top-right-radius: 14px"
+                  >
+                    Попробовать →
+                  </a>
+
+                  <div class="grid gap-4 sm:grid-cols-[1fr_220px] sm:items-stretch">
+                    <div class="relative flex flex-col p-6 pb-14">
+                      <h3 class="text-base font-semibold text-slate-900">Интерактивный элементы и анимации</h3>
+                      <p class="mt-3 text-sm leading-snug text-slate-600">Анимации, которые цепляют и не ломают Tilda.</p>
+                    </div>
+
+                    <img src="/3.png" alt="Интерактивные элементы и анимации" class="block h-full w-full object-cover" loading="lazy" />
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section id="demo" class="mt-8">
+            <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+              <div class="grid gap-0 md:grid-cols-[1fr_420px] md:items-stretch">
+                <div class="flex flex-col justify-between p-6">
+                  <div>
+                    <h2 class="text-lg font-semibold text-slate-900">Прокачаем выхлоп за 1 день</h2>
+                    <p class="mt-3 text-sm font-medium leading-snug text-slate-600">Скидка -15%. Гарантия 2 года. Расчет 1 мин</p>
+                  </div>
+                  <a href="#" class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-sky-100 px-7 py-3 text-base font-bold text-sky-700 hover:bg-sky-200">Подробнее →</a>
+                </div>
+
+                <div class="relative">
+                  <img src="/%7BF54F2096-275F-45AD-9FF8-0354E8968D91%7D%201.png" alt="Рекламный баннер" class="h-full w-full object-cover md:min-h-[180px]" loading="lazy" />
+                  <span class="absolute bottom-3 right-3 rounded-md bg-black/45 px-2 py-1 text-[10px] font-medium text-white">Реклама</span>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="mt-8" aria-labelledby="support-title">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+              <div class="grid gap-6 md:grid-cols-[1fr_320px] md:items-center">
+                <div>
+                  <h2 id="support-title" class="text-xl font-semibold text-slate-900">Поддержать проект</h2>
+                  <p class="mt-3 max-w-xl text-sm leading-snug text-slate-600">
+                    Если статья помогла — вы можете поблагодарить любой суммой. Это мотивирует писать больше таких гайдов!
+                  </p>
+
+                  <div class="mt-5 flex flex-wrap gap-2" role="group" aria-label="Сумма" data-donation-group>
+                    <button type="button" data-donation="100" aria-pressed="false" class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">100 ₽</button>
+                    <button
+                      type="button"
+                      data-donation="300"
+                      aria-pressed="true"
+                      class="donation-btn rounded-xl bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-[0_10px_20px_rgba(6,182,212,0.30)]"
+                    >
+                      300 ₽
+                    </button>
+                    <button type="button" data-donation="500" aria-pressed="false" class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">500 ₽</button>
+                    <button type="button" data-donation="custom" aria-pressed="false" class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">Своя сумма</button>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="mt-5 inline-flex min-w-[200px] items-center justify-center rounded-xl bg-black px-10 py-2.5 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(0,0,0,0.18)] hover:bg-slate-900"
+                  >
+                    Поблагодарить
+                  </button>
+                </div>
+
+                <img src="/Gemini_Generated_Image_7z5mpl7z5mpl7z5m-Photoroom%201.png" alt="Иллюстрация для блока поддержки" class="mx-auto h-auto w-full max-w-[320px] rounded-3xl" loading="lazy" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="relative border-t border-slate-200 bg-white/70 backdrop-blur">
+        <div class="mx-auto max-w-[1236px] px-4 py-10">
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-slate-200">
+            <div class="lg:pr-8">
+              <div class="flex items-center gap-3">
+                <img src="/icon.png" alt="" aria-hidden="true" class="h-7 w-7" loading="lazy" />
+                <p class="text-sm font-medium">Versent</p>
+              </div>
+              <p class="mt-3 text-xs text-slate-600">© <span id="year"></span> Versent.</p>
+              <p class="mt-1 text-xs text-slate-600">Все права защищены.</p>
+              <p class="mt-4 text-xs text-slate-500">Icons by icons8</p>
+              <p class="mt-1 text-xs text-slate-500">делал DimaTorzok</p>
+            </div>
+
+            <div class="lg:px-8">
+              <p class="text-sm font-semibold text-slate-900">Навигация</p>
+              <ul class="mt-4 grid gap-2 text-sm text-slate-500">
+                <li><a href="#" class="hover:text-slate-900">Главная</a></li>
+                <li><a href="#lessons" class="hover:text-slate-900">Статьи</a></li>
+                <li><a href="#mods" class="hover:text-slate-900">Проекты</a></li>
+                <li><a href="#" class="hover:text-slate-900">Модификации</a></li>
+                <li><a href="#demo" class="hover:text-slate-900">Документация</a></li>
+                <li><a href="#" class="hover:text-slate-900">Блог</a></li>
+                <li><a href="#" class="hover:text-slate-900">Контакты</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:px-8">
+              <p class="text-sm font-semibold text-slate-900">Кастомные блоки</p>
+              <ul class="mt-4 grid gap-2 text-sm text-slate-500">
+                <li><a href="#" class="hover:text-slate-900">Кастомный каталог</a></li>
+                <li><a href="#" class="hover:text-slate-900">Кастомные карточки</a></li>
+                <li><a href="#" class="hover:text-slate-900">Изменения корзины</a></li>
+              </ul>
+            </div>
+
+            <div class="lg:pl-8">
+              <p class="text-sm font-semibold text-slate-900">Контакты</p>
+              <ul class="mt-4 grid gap-2 text-sm text-slate-500">
+                <li><a href="mailto:hello@gmail.com" class="hover:text-slate-900">hello@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+
+    <script type="module">
+      document.getElementById('year').textContent = new Date().getFullYear()
+
+      const group = document.querySelector('[data-donation-group]')
+      if (group) {
+        group.addEventListener('click', (e) => {
+          const btn = e.target?.closest?.('.donation-btn')
+          if (!btn) return
+
+          const buttons = group.querySelectorAll('.donation-btn')
+          buttons.forEach((b) => {
+            b.setAttribute('aria-pressed', 'false')
+            b.classList.remove('bg-cyan-400', 'font-semibold', 'text-slate-900', 'shadow-[0_10px_20px_rgba(6,182,212,0.30)]')
+            b.classList.add('bg-slate-100', 'font-medium', 'text-slate-700')
+          })
+
+          btn.setAttribute('aria-pressed', 'true')
+          btn.classList.remove('bg-slate-100', 'font-medium', 'text-slate-700')
+          btn.classList.add('bg-cyan-400', 'font-semibold', 'text-slate-900', 'shadow-[0_10px_20px_rgba(6,182,212,0.30)]')
+        })
+      }
+    </script>
   </body>
 </html>
