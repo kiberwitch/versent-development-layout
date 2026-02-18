@@ -18,7 +18,6 @@
       "
     >
       <div class="pointer-events-none absolute -left-28 top-28 h-72 w-72 rounded-full bg-indigo-300/30 blur-3xl"></div>
-      <div class="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full bg-sky-300/30 blur-3xl"></div>
       <div class="pointer-events-none absolute -left-36 bottom-24 h-96 w-96 rounded-full bg-purple-300/25 blur-3xl"></div>
       <div class="pointer-events-none absolute -right-32 bottom-8 h-96 w-96 rounded-full bg-blue-300/25 blur-3xl"></div>
 
@@ -57,7 +56,7 @@
                 </span>
               </div>
 
-              <button type="button" aria-label="Открыть меню" class="grid h-9 w-10 place-items-center">
+              <button type="button" aria-label="Открыть меню" class="grid h-9 w-10 place-items-center" data-header-menu-toggle>
                 <span class="grid gap-1">
                   <span class="h-0.5 w-6 rounded bg-slate-700"></span>
                   <span class="h-0.5 w-6 rounded bg-slate-700"></span>
@@ -66,6 +65,95 @@
               </button>
             </div>
           </div>
+
+          <div class="fixed z-50 hidden w-[360px] max-w-[calc(100vw-32px)]" data-header-menu-panel>
+            <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]">
+              <div class="flex items-center justify-between gap-4 px-4 pt-4">
+                <div class="flex items-center gap-2">
+                  <img src="/icon.png" alt="" aria-hidden="true" class="h-6 w-6" loading="lazy" />
+                  <p class="text-base font-semibold text-slate-900">Versent</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <a href="#" aria-label="VK" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                    <img src="/VK.png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
+                  </a>
+                  <a href="#" aria-label="Telegram" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                    <img src="/Telegram App (2).png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
+                  </a>
+                  <a href="#" aria-label="YouTube" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                    <img src="/YouTube (1).png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-3 px-4">
+                <div class="relative grid grid-cols-2 overflow-hidden rounded-xl p-1 text-sm font-semibold" style="background: #0bf;">
+                  <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="mods"><span data-menu-tab-label>Модификации</span></button>
+                  <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="settings"><span data-menu-tab-label>Настройки</span></button>
+                  <div aria-hidden="true" class="pointer-events-none absolute bottom-2 left-0 h-[2px] w-0 opacity-0" style="background: #fff;" data-menu-tab-underline></div>
+                </div>
+              </div>
+
+              <div class="px-4 pb-4 pt-4">
+                <div data-menu-tab="mods">
+                  <div class="rounded-xl bg-slate-50 p-3 text-xs text-slate-600" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                    <p>Имя пользователя: Ник</p>
+                    <p class="mt-1">Почта: Почта</p>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="mt-4 inline-flex h-9 w-full items-center justify-center rounded-xl text-sm font-bold text-white"
+                    data-open-pro-modal
+                    style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);"
+                  >
+                    Улучшить до Pro+
+                  </button>
+
+                  <div class="mt-4 grid grid-cols-2 gap-3">
+                    <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 1</div>
+                    <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 2</div>
+                    <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 3</div>
+                    <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 4</div>
+                    <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 5</div>
+                    <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Создать шаблон</div>
+                  </div>
+
+                  <p class="mt-4 text-[10px] text-slate-500">Нашли ошибку или хотите что-то предложить? Напишите нам</p>
+                </div>
+
+                <div class="hidden" data-menu-tab="settings">
+                  <p class="text-[11px] font-semibold text-slate-700">Общие</p>
+                  <div class="mt-2 grid gap-2 text-[11px] text-slate-600">
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> id блоков</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> возможность добавлять комментарии к блокам</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> reset блоков</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> тёмная тема для этого блока</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> линии для этого блока</label>
+                  </div>
+
+                  <p class="mt-4 text-[11px] font-semibold text-slate-700">Меню редактора (Справа)</p>
+                  <div class="mt-2 grid gap-2 text-[11px] text-slate-600">
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Показать кнопки быстрой публикации</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть предпросмотр</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть опубликованное</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть настройки</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть помощь</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть ещё</label>
+                  </div>
+
+                  <button type="button" class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-slate-500 px-4 py-2 text-[11px] font-semibold text-white hover:bg-slate-600">Применить</button>
+
+                  <div class="mt-4 flex items-center justify-between gap-3">
+                    <p class="text-[10px] text-slate-500">Оплати подписку, чтобы получить доступ</p>
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fixed inset-0 z-40 hidden bg-black/40" data-header-menu-backdrop></div>
         </div>
       </header>
 
@@ -192,7 +280,7 @@
               <div class="grid gap-4 md:grid-cols-2">
                 <article class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
                   <a
-                    href="#"
+                    href="/logos-marquee.html"
                     class="absolute bottom-0 left-0 z-10 inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white shadow-[0_12px_22px_rgba(6,182,212,0.35)]"
                     style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); border-top-right-radius: 14px"
                   >
@@ -239,7 +327,7 @@
                     <h2 class="text-lg font-semibold text-slate-900">Прокачаем выхлоп за 1 день</h2>
                     <p class="mt-3 text-sm font-medium leading-snug text-slate-600">Скидка -15%. Гарантия 2 года. Расчет 1 мин</p>
                   </div>
-                  <a href="#" class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-sky-100 px-7 py-3 text-base font-bold text-sky-700 hover:bg-sky-200">Подробнее →</a>
+                  <a href="/not-found.html" class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-sky-100 px-7 py-3 text-base font-bold text-sky-700 hover:bg-sky-200">Подробнее →</a>
                 </div>
 
                 <div class="relative">
@@ -335,6 +423,123 @@
       </footer>
     </div>
 
+    <div class="fixed inset-0 z-[60] hidden" data-pro-modal>
+      <div class="absolute inset-0 bg-black/60" data-pro-modal-close></div>
+      <div class="relative mx-auto mt-20 w-[720px] max-w-[calc(100vw-32px)] overflow-hidden rounded-3xl bg-white shadow-[0_28px_90px_rgba(15,23,42,0.35)]">
+        <div class="grid gap-6 p-8 md:grid-cols-[1fr_220px] md:items-center">
+          <div>
+            <p class="text-lg font-semibold text-slate-900">Оплати подписку,</p>
+            <p class="text-lg font-semibold text-slate-900">чтобы получить доступ</p>
+            <button type="button" class="mt-6 inline-flex items-center justify-center rounded-xl bg-emerald-400 px-8 py-3 text-sm font-bold text-white hover:bg-emerald-500" data-open-tariffs>
+              К выбору тарифа +
+            </button>
+          </div>
+
+          <img src="/Gemini_Generated_Image_wg0ql0wg0ql0wg0q 1.png" alt="" aria-hidden="true" class="mx-auto h-auto w-full max-w-[220px]" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="fixed inset-0 z-[70] hidden" data-tariffs-modal>
+      <div class="absolute inset-0 bg-black">
+        <div class="absolute inset-0 opacity-80" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,1) 70%);"></div>
+      </div>
+
+      <div class="relative flex h-full flex-col">
+        <div class="flex items-center justify-between px-6 py-5">
+          <div class="flex items-center gap-3">
+            <img src="/icon.png" alt="" aria-hidden="true" class="h-8 w-8" loading="lazy" />
+            <p class="text-xl font-semibold text-white">Versent</p>
+          </div>
+
+          <button type="button" class="text-4xl font-medium leading-none text-white" aria-label="Закрыть" data-tariffs-close>
+            ×
+          </button>
+        </div>
+
+        <div class="flex-1 overflow-auto px-6 pb-10">
+          <h2 class="mt-2 text-center text-4xl font-extrabold tracking-tight text-white">Выберите тариф</h2>
+
+          <div class="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+            <div class="relative">
+              <article class="relative flex   flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
+                <h3 class="relative z-10 text-lg font-bold text-slate-900">Пробный</h3>
+                <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: Бесплатно (7 дней)</p>
+                <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Доступ к базовым скриптам</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Автообновление</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Поддержка в Telegram</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Темная тема</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Белая метка (White-label)</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Пакетная обработка картинок</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сертификат PRO-пользователя</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Доступ к PRO-материалам</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сохранённые пресеты</span></li>
+                </ul>
+                <div class="relative z-10 mt-auto pt-10">
+                  <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Начать пробный период</button>
+                </div>
+                <img src="/подарка.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[175px]" loading="lazy" />
+              </article>
+            </div>
+
+            <div class="relative">
+              <div class="pointer-events-none absolute right-6 top-0 z-20 -translate-y-[65%] rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(270deg, #06f 0%, #003d99 100%)">PRO</div>
+              <article class="relative flex   flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
+                <h3 class="relative z-10 text-lg font-bold text-slate-900">Базовый</h3>
+                <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: 300 ₽ / мес</p>
+                <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Полный доступ ко всем скриптам</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Автообновление</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Поддержка в Telegram</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Темная тема</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Белая метка (White-label)</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Приоритетная поддержка</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сертификат PRO-пользователя</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Пакетная обработка картинок</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Создать более 1 слайда</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сохранённые пресеты</span></li>
+                </ul>
+                <div class="relative z-10 mt-auto pt-10">
+                  <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Выбрать</button>
+                </div>
+                <img src="/клавитура.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[175px]" loading="lazy" />
+              </article>
+            </div>
+
+            <div class="relative">
+              <div class="pointer-events-none absolute right-6 top-0 z-20 -translate-y-[65%] flex items-center gap-2">
+                <span class="rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(135deg, #ff0900 0%, #ff724e 100%)">Самый популярный 🔥</span>
+                <span class="rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(135deg, #ff724e 0%, #ffae00 100%)">PRO+</span>
+              </div>
+              <article class="relative flex   flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
+                <h3 class="relative z-10 text-lg font-bold text-slate-900">Профессиональный</h3>
+                <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: 150 ₽ / мес <span class="text-[10px] text-slate-500">(на протяжении года)</span></p>
+                <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Все функции Базового PRO</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Полный доступ к инструментам</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Открытый чат с разработчиками</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Создание до 3 слайдов</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Тест 2 скрипта из библиотеки</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Пакетная обработка изображений</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сохранённые пресеты</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сертификат PRO-пользователя</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Приоритетная поддержка</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>PRO-библиотека уроков</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Личный кабинет с аналитикой</span></li>
+                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Ранний доступ к новым функциям</span></li>
+                </ul>
+                <div class="relative z-10 mt-auto pt-10">
+                  <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Выбрать</button>
+                </div>
+                <img src="/кубак.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[190px]" loading="lazy" />
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module">
       document.getElementById('year').textContent = new Date().getFullYear()
 
@@ -356,6 +561,164 @@
           btn.classList.add('bg-cyan-400', 'font-semibold', 'text-slate-900', 'shadow-[0_10px_20px_rgba(6,182,212,0.30)]')
         })
       }
+
+      const menuToggle = document.querySelector('[data-header-menu-toggle]')
+      const menuPanel = document.querySelector('[data-header-menu-panel]')
+      const menuBackdrop = document.querySelector('[data-header-menu-backdrop]')
+
+      const positionMenuPanel = () => {
+        if (!menuToggle || !menuPanel) return
+
+        const rect = menuToggle.getBoundingClientRect()
+        const panelWidth = menuPanel.offsetWidth || 360
+        const gap = 10
+        const top = rect.bottom + gap
+
+        const minLeft = 16
+        const maxLeft = Math.max(minLeft, window.innerWidth - panelWidth - 16)
+        const preferredLeft = rect.right - panelWidth
+        const left = Math.min(Math.max(preferredLeft, minLeft), maxLeft)
+
+        menuPanel.style.top = `${top}px`
+        menuPanel.style.left = `${left}px`
+      }
+
+      const openMenu = () => {
+        if (!menuPanel || !menuBackdrop) return
+        positionMenuPanel()
+        menuPanel.classList.remove('hidden')
+        menuBackdrop.classList.remove('hidden')
+      }
+
+      const closeMenu = () => {
+        if (!menuPanel || !menuBackdrop) return
+        menuPanel.classList.add('hidden')
+        menuBackdrop.classList.add('hidden')
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          if (!menuPanel || !menuBackdrop) return
+          const isOpen = menuBackdrop && !menuBackdrop.classList.contains('hidden')
+          if (isOpen) closeMenu()
+          else openMenu()
+        })
+      }
+
+      window.addEventListener('resize', () => {
+        if (!menuBackdrop || menuBackdrop.classList.contains('hidden')) return
+        positionMenuPanel()
+      })
+
+      if (menuBackdrop) {
+        menuBackdrop.addEventListener('click', () => closeMenu())
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeMenu()
+          const modal = document.querySelector('[data-pro-modal]')
+          if (modal && !modal.classList.contains('hidden')) modal.classList.add('hidden')
+          const tariffs = document.querySelector('[data-tariffs-modal]')
+          if (tariffs && !tariffs.classList.contains('hidden')) tariffs.classList.add('hidden')
+        }
+      })
+
+      const tabBtns = document.querySelectorAll('[data-menu-tab-btn]')
+      const tabPanels = document.querySelectorAll('[data-menu-tab]')
+      const tabUnderline = document.querySelector('[data-menu-tab-underline]')
+
+      const positionTabUnderline = (btn) => {
+        if (!tabUnderline || !btn) return
+        const parent = tabUnderline.parentElement
+        if (!parent) return
+
+        const parentRect = parent.getBoundingClientRect()
+        const label = btn.querySelector('[data-menu-tab-label]')
+        const targetRect = (label || btn).getBoundingClientRect()
+
+        const width = targetRect.width
+        const left = targetRect.left - parentRect.left
+        const maxLeft = Math.max(0, parentRect.width - width)
+        const clampedLeft = Math.min(Math.max(left, 0), maxLeft)
+
+        tabUnderline.style.width = `${width}px`
+        tabUnderline.style.transform = `translateX(${clampedLeft}px)`
+      }
+
+      const setActiveTabBtn = (activeBtn) => {
+        tabBtns.forEach((b) => {
+          b.classList.remove('opacity-100', 'font-bold')
+          b.classList.add('opacity-70', 'font-semibold')
+        })
+
+        if (activeBtn) {
+          activeBtn.classList.remove('opacity-70', 'font-semibold')
+          activeBtn.classList.add('opacity-100', 'font-bold')
+          positionTabUnderline(activeBtn)
+          tabUnderline.classList.remove('opacity-0')
+          tabUnderline.classList.add('opacity-100')
+        }
+      }
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const tab = btn.getAttribute('data-menu-tab-btn')
+          if (!tab) return
+
+          setActiveTabBtn(btn)
+          tabPanels.forEach((panel) => {
+            if (panel.getAttribute('data-menu-tab') === tab) panel.classList.remove('hidden')
+            else panel.classList.add('hidden')
+          })
+        })
+      })
+
+      const initialActiveBtn = document.querySelector('[data-menu-tab-btn="mods"]')
+      if (initialActiveBtn) setActiveTabBtn(initialActiveBtn)
+
+      window.addEventListener('resize', () => {
+        if (!menuBackdrop || menuBackdrop.classList.contains('hidden')) return
+        const currentTab = document.querySelector('[data-menu-tab-btn].font-bold')
+        if (currentTab) positionTabUnderline(currentTab)
+      })
+
+      const proModal = document.querySelector('[data-pro-modal]')
+      const tariffsModal = document.querySelector('[data-tariffs-modal]')
+      const openProBtns = document.querySelectorAll('[data-open-pro-modal]')
+      const closeProBtns = document.querySelectorAll('[data-pro-modal-close]')
+      const openTariffsBtns = document.querySelectorAll('[data-open-tariffs]')
+      const closeTariffsBtns = document.querySelectorAll('[data-tariffs-close]')
+
+      openProBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (!proModal) return
+          closeMenu()
+          proModal.classList.remove('hidden')
+        })
+      })
+
+      closeProBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (!proModal) return
+          proModal.classList.add('hidden')
+        })
+      })
+
+      openTariffsBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (proModal && !proModal.classList.contains('hidden')) proModal.classList.add('hidden')
+          if (!tariffsModal) return
+          tariffsModal.classList.remove('hidden')
+        })
+      })
+
+      closeTariffsBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (!tariffsModal) return
+          tariffsModal.classList.add('hidden')
+        })
+      })
     </script>
   </body>
 </html>
