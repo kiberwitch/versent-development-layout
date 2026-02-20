@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Versent — Поддержать проект</title>
+  </head>
+
+  <body
+    class="min-h-dvh overflow-x-hidden bg-gradient-to-b from-white via-slate-50 to-white text-slate-900"
+  >
+    <header class="relative">
+      <div class="mx-auto max-w-[1236px] px-4 pt-4">
+        <div
+          class="relative flex items-center justify-between rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur"
+        >
+          <div class="flex items-center gap-3">
+            <img src="/icon.png" alt="Логотип" class="h-7 w-7 shrink-0" loading="eager" />
+            <a href="/index.html" class="text-base font-medium tracking-tight">Versent</a>
+          </div>
+
+          <nav
+            aria-label="Основная навигация"
+            class="absolute left-1/2 hidden -translate-x-1/2 items-center justify-center gap-8 text-sm text-slate-500 sm:flex"
+          >
+            <a href="/index.html#lessons" class="hover:text-slate-900" data-open-cookie>Уроки</a>
+            <a href="/index.html#mods" class="hover:text-slate-900">Код</a>
+            <a href="/index.html#effects" class="hover:text-slate-900">Эффекты</a>
+            <a href="/index.html#demo" class="hover:text-slate-900">Демо</a>
+          </nav>
+
+          <div class="hidden items-center gap-4 sm:flex">
+            <div class="relative flex items-center">
+              <input
+                aria-label="Поиск"
+                placeholder="Поиск..."
+                class="h-7 w-60 border-y border-slate-300 bg-transparent px-2 pr-8 text-sm text-slate-700 outline-none placeholder:text-slate-400"
+              />
+              <span aria-hidden="true" class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-500">⌕</span>
+            </div>
+
+            <button type="button" aria-label="Открыть меню" class="grid h-9 w-10 place-items-center" data-header-menu-toggle>
+              <span class="grid gap-1">
+                <span class="h-0.5 w-6 rounded bg-slate-700"></span>
+                <span class="h-0.5 w-6 rounded bg-slate-700"></span>
+                <span class="h-0.5 w-6 rounded bg-slate-700"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="fixed z-50 hidden w-[360px] max-w-[calc(100vw-32px)]" data-header-menu-panel>
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]">
+            <div class="flex items-center justify-between gap-4 px-4 pt-4">
+              <div class="flex items-center gap-2">
+                <img src="/icon.png" alt="" aria-hidden="true" class="h-6 w-6" loading="lazy" />
+                <p class="text-base font-semibold text-slate-900">Versent</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <a href="#" aria-label="VK" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                  <img src="/VK.png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
+                </a>
+                <a href="#" aria-label="Telegram" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                  <img src="/Telegram App (2).png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
+                </a>
+                <a href="#" aria-label="YouTube" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                  <img src="/YouTube (1).png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-3 px-4">
+              <div class="relative grid grid-cols-2 overflow-hidden rounded-xl p-1 text-sm font-semibold" style="background: #0bf;">
+                <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="mods"><span data-menu-tab-label>Модификации</span></button>
+                <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="settings"><span data-menu-tab-label>Настройки</span></button>
+                <div aria-hidden="true" class="pointer-events-none absolute bottom-2 left-0 h-[2px] w-0 opacity-0" style="background: #fff;" data-menu-tab-underline></div>
+              </div>
+            </div>
+
+            <div class="px-4 pb-4 pt-4">
+              <div data-menu-tab="mods">
+                <div
+                  class="rounded-xl bg-slate-50 p-3 text-xs text-slate-600"
+                  style="
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09),
+                      0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);
+                  "
+                >
+                  <p>Имя пользователя: Ник</p>
+                  <p class="mt-1">Почта: Почта</p>
+                </div>
+
+                <button
+                  type="button"
+                  class="mt-4 inline-flex h-9 w-full items-center justify-center rounded-xl text-sm font-bold text-white"
+                  data-open-pro-modal
+                  style="
+                    background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09),
+                      0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);
+                  "
+                >
+                  Улучшить до Pro+
+                </button>
+
+                <div class="mt-4 grid grid-cols-2 gap-3">
+                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 1</div>
+                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 2</div>
+                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 3</div>
+                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 4</div>
+                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 5</div>
+                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Создать шаблон</div>
+                </div>
+
+                <p class="mt-4 text-[10px] text-slate-500">Нашли ошибку или хотите что-то предложить? Напишите нам</p>
+              </div>
+
+              <div class="hidden" data-menu-tab="settings">
+                <p class="text-[11px] font-semibold text-slate-700">Общие</p>
+                <div class="mt-2 grid gap-2 text-[11px] text-slate-600">
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> id блоков</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> возможность добавлять комментарии к блокам</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> reset блоков</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> тёмная тема для этого блока</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> линии для этого блока</label>
+                </div>
+
+                <p class="mt-4 text-[11px] font-semibold text-slate-700">Меню редактора (Справа)</p>
+                <div class="mt-2 grid gap-2 text-[11px] text-slate-600">
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Показать кнопки быстрой публикации</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть предпросмотр</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть опубликованное</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть настройки</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть помощь</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть ещё</label>
+                </div>
+
+                <button type="button" class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-slate-500 px-4 py-2 text-[11px] font-semibold text-white hover:bg-slate-600">Применить</button>
+
+                <div class="mt-4 flex items-center justify-between gap-3">
+                  <p class="text-[10px] text-slate-500">Оплати подписку, чтобы получить доступ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fixed inset-0 z-40 hidden bg-black/40" data-header-menu-backdrop></div>
+      </div>
+    </header>
+
+    <main class="relative mx-auto max-w-[1236px] px-4 pb-32 pt-6">
+      <div class="mx-auto w-full overflow-hidden rounded-3xl border border-slate-200/60 bg-white/85 shadow-[0_25px_70px_rgba(15,23,42,0.14)] backdrop-blur">
+        <div class="p-2 sm:p-8">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-xs text-slate-400">Главная + Интерактивный элементы и анимации</p>
+              <h1 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Интерактивный элементы и анимации</h1>
+              <p class="mt-3 max-w-3xl text-sm leading-snug text-slate-600">
+                Дышите жизнью в статику. Создавайте не просто кнопки и блоки, а живые интерфейсные организмы с брендированной механикой реакции.
+                Каждое наведение, клик и скролл — это возможность для диалога с пользователем через уникальную, осмысленную анимацию, сшитую в код вашего стиля.
+              </p>
+              <p class="mt-3 text-sm font-semibold text-slate-800">Фильтр: Кнопки | Курсор | Еще чет |</p>
+            </div>
+
+            <a href="/index.html" class="shrink-0 text-xs font-semibold text-slate-500 hover:text-slate-900">← Вернуться на главную</a>
+          </div>
+
+          <div class="mt-6 h-px w-full bg-slate-200"></div>
+
+          <div class="mt-6 grid gap-12 md:grid-cols-2">
+            <div>
+              <div class="mx-auto w-full max-w-[520px] overflow-hidden border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+                <div class="h-[460px] w-full" style="background: #d9d9d9;"></div>
+              </div>
+              <p class="mt-3 text-center text-xs font-semibold text-slate-900">пример как выглядит анимация на кнопке</p>
+            </div>
+
+            <div>
+              <div class="relative mx-auto w-full max-w-[520px] overflow-hidden border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+                <div class="h-[460px] w-full" style="background: #d9d9d9;"></div>
+                <button type="button" class="absolute left-0 top-0 h-[49px] w-[200px] px-4 text-left text-[11px] font-semibold text-white" style="background: #9a9a9a; border: 1px solid rgba(255,255,255,0.65);">Полный готовый скрипт</button>
+              </div>
+              <p class="mt-3 text-center text-xs font-semibold text-slate-900">Код</p>
+            </div>
+          </div>
+
+          <section class="mt-8" aria-labelledby="support-title">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
+              <div class="grid gap-6 md:grid-cols-[1fr_320px] md:items-center">
+                <div>
+                  <h2 id="support-title" class="text-[29px] font-bold  ">Поддержать проект</h2>
+                  <p class="mt-3 max-w-xl text-[14] leading-snug text-slate-700">
+                    Если статья помогла — вы можете поблагодарить любой суммой. Это мотивирует писать больше таких гайдов!
+                  </p>
+
+                  <div class="mt-5 flex flex-wrap gap-2" role="group" aria-label="Сумма" data-donation-group>
+                    <button type="button" data-donation="100" aria-pressed="false" class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-[20px] font-medium text-slate-700 hover:bg-slate-200">100 ₽</button>
+                    <button
+                      type="button"
+                      data-donation="300"
+                      aria-pressed="true"
+                      class="donation-btn rounded-xl px-5 py-2 text-[20px] font-semibold text-slate-900  ]"
+                      style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);"
+                    >
+                      300 ₽
+                    </button>
+                    <button type="button" data-donation="500" aria-pressed="false" class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-[20px] font-medium text-slate-700 hover:bg-slate-200">500 ₽</button>
+                    <button type="button" data-donation="custom" aria-pressed="false" class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-[20px] font-medium text-slate-700 hover:bg-slate-200">Своя сумма</button>
+                  </div>
+
+                  <a
+                    href="/support.html"
+                    class="mt-5 inline-flex min-w-[100px] items-center justify-center rounded-xl bg-black px-10 py-2.5 text-[20px] font-semibold text-white shadow-[0_12px_24px_rgba(0,0,0,0.18)] hover:bg-slate-900"
+                  >
+                    Поблагодарить
+                  </a>
+                </div>
+
+                <img src="/heart%20_logo.png" alt="Иллюстрация для блока поддержки" class="mx-auto h-auto w-full max-w-[320px] rounded-3xl" loading="lazy" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="fixed inset-0 z-[60] hidden" data-pro-modal>
+      <div class="absolute inset-0 bg-black/60" data-pro-modal-close></div>
+      <div
+        class="relative mx-auto mt-20 w-[720px] max-w-[calc(100vw-32px)] overflow-hidden rounded-3xl bg-white shadow-[0_28px_90px_rgba(15,23,42,0.35)]"
+      >
+        <div class="grid gap-6 p-8 md:grid-cols-[1fr_220px] md:items-center">
+          <div>
+            <p class="text-lg font-semibold text-slate-900">Оплати подписку,</p>
+            <p class="text-lg font-semibold text-slate-900">чтобы получить доступ</p>
+            <a href="/tariffs-modal-standalone.html" class="mt-6 inline-flex items-center justify-center rounded-xl px-8 py-3 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">
+              К выбору тарифа +
+            </a>
+          </div>
+
+          <img src="/Gemini_Generated_Image_wg0ql0wg0ql0wg0q%201.png" alt="" aria-hidden="true" class="mx-auto h-auto w-full max-w-[220px]" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      const group = document.querySelector('[data-donation-group]')
+      if (group) {
+        group.addEventListener('click', (e) => {
+          const btn = e.target?.closest?.('.donation-btn')
+          if (!btn) return
+
+          const buttons = group.querySelectorAll('.donation-btn')
+          buttons.forEach((b) => {
+            b.setAttribute('aria-pressed', 'false')
+            b.classList.remove('bg-cyan-400', 'font-semibold', 'text-slate-900', 'shadow-[0_10px_20px_rgba(6,182,212,0.30)]')
+            b.classList.add('bg-slate-100', 'font-medium', 'text-slate-700')
+          })
+
+          btn.setAttribute('aria-pressed', 'true')
+          btn.classList.remove('bg-slate-100', 'font-medium', 'text-slate-700')
+          btn.classList.add('bg-cyan-400', 'font-semibold', 'text-slate-900', 'shadow-[0_10px_20px_rgba(6,182,212,0.30)]')
+        })
+      }
+
+      const cookiePopup = document.querySelector('[data-cookie-popup]')
+      const cookieAcceptBtn = document.querySelector('[data-cookie-accept]')
+      const cookieOpenBtn = document.querySelector('[data-open-cookie]')
+
+      const COOKIE_KEY = 'versent_cookie_accepted'
+
+      const isCookieAccepted = () => {
+        try {
+          return localStorage.getItem(COOKIE_KEY) === '1'
+        } catch {
+          return false
+        }
+      }
+
+      const showCookiePopup = () => {
+        if (!cookiePopup) return
+        if (isCookieAccepted()) return
+        cookiePopup.classList.remove('hidden')
+      }
+
+      const hideCookiePopup = () => {
+        if (!cookiePopup) return
+        cookiePopup.classList.add('hidden')
+      }
+
+      if (cookieOpenBtn) {
+        cookieOpenBtn.addEventListener('click', (e) => {
+          e.preventDefault()
+          showCookiePopup()
+        })
+      }
+
+      if (cookieAcceptBtn) {
+        cookieAcceptBtn.addEventListener('click', () => {
+          try {
+            localStorage.setItem(COOKIE_KEY, '1')
+          } catch {
+            // ignore
+          }
+          hideCookiePopup()
+        })
+      }
+
+      const menuToggle = document.querySelector('[data-header-menu-toggle]')
+      const menuPanel = document.querySelector('[data-header-menu-panel]')
+      const menuBackdrop = document.querySelector('[data-header-menu-backdrop]')
+
+      const positionMenuPanel = () => {
+        if (!menuToggle || !menuPanel) return
+
+        const rect = menuToggle.getBoundingClientRect()
+        const panelWidth = menuPanel.offsetWidth || 360
+        const gap = 10
+        const top = rect.bottom + gap
+
+        const minLeft = 16
+        const maxLeft = Math.max(minLeft, window.innerWidth - panelWidth - 16)
+        const preferredLeft = rect.right - panelWidth
+        const left = Math.min(Math.max(preferredLeft, minLeft), maxLeft)
+
+        menuPanel.style.top = `${top}px`
+        menuPanel.style.left = `${left}px`
+      }
+
+      const openMenu = () => {
+        if (!menuPanel || !menuBackdrop) return
+        positionMenuPanel()
+        menuPanel.classList.remove('hidden')
+        menuBackdrop.classList.remove('hidden')
+      }
+
+      const closeMenu = () => {
+        if (!menuPanel || !menuBackdrop) return
+        menuPanel.classList.add('hidden')
+        menuBackdrop.classList.add('hidden')
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          if (!menuPanel || !menuBackdrop) return
+          const isOpen = menuBackdrop && !menuBackdrop.classList.contains('hidden')
+          if (isOpen) closeMenu()
+          else openMenu()
+        })
+      }
+
+      window.addEventListener('resize', () => {
+        if (!menuBackdrop || menuBackdrop.classList.contains('hidden')) return
+        positionMenuPanel()
+      })
+
+      if (menuBackdrop) {
+        menuBackdrop.addEventListener('click', () => closeMenu())
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeMenu()
+          const modal = document.querySelector('[data-pro-modal]')
+          if (modal && !modal.classList.contains('hidden')) modal.classList.add('hidden')
+        }
+      })
+
+      const tabBtns = document.querySelectorAll('[data-menu-tab-btn]')
+      const tabPanels = document.querySelectorAll('[data-menu-tab]')
+      const tabUnderline = document.querySelector('[data-menu-tab-underline]')
+
+      const positionTabUnderline = (btn) => {
+        if (!tabUnderline || !btn) return
+        const parent = tabUnderline.parentElement
+        if (!parent) return
+
+        const parentRect = parent.getBoundingClientRect()
+        const label = btn.querySelector('[data-menu-tab-label]')
+        const targetRect = (label || btn).getBoundingClientRect()
+
+        const width = targetRect.width
+        const left = targetRect.left - parentRect.left
+        const maxLeft = Math.max(0, parentRect.width - width)
+        const clampedLeft = Math.min(Math.max(left, 0), maxLeft)
+
+        tabUnderline.style.width = `${width}px`
+        tabUnderline.style.transform = `translateX(${clampedLeft}px)`
+      }
+
+      const setActiveTabBtn = (activeBtn) => {
+        tabBtns.forEach((b) => {
+          b.classList.remove('opacity-100', 'font-bold')
+          b.classList.add('opacity-70', 'font-semibold')
+        })
+
+        if (activeBtn) {
+          activeBtn.classList.remove('opacity-70', 'font-semibold')
+          activeBtn.classList.add('opacity-100', 'font-bold')
+          positionTabUnderline(activeBtn)
+          tabUnderline.classList.remove('opacity-0')
+          tabUnderline.classList.add('opacity-100')
+        }
+      }
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const tab = btn.getAttribute('data-menu-tab-btn')
+          if (!tab) return
+
+          setActiveTabBtn(btn)
+          tabPanels.forEach((panel) => {
+            if (panel.getAttribute('data-menu-tab') === tab) panel.classList.remove('hidden')
+            else panel.classList.add('hidden')
+          })
+        })
+      })
+
+      const initialActiveBtn = document.querySelector('[data-menu-tab-btn="mods"]')
+      if (initialActiveBtn) setActiveTabBtn(initialActiveBtn)
+
+      window.addEventListener('resize', () => {
+        if (!menuBackdrop || menuBackdrop.classList.contains('hidden')) return
+        const currentTab = document.querySelector('[data-menu-tab-btn].font-bold')
+        if (currentTab) positionTabUnderline(currentTab)
+      })
+
+      const proModal = document.querySelector('[data-pro-modal]')
+      const openProBtns = document.querySelectorAll('[data-open-pro-modal]')
+      const closeProBtns = document.querySelectorAll('[data-pro-modal-close]')
+
+      openProBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (!proModal) return
+          closeMenu()
+          proModal.classList.remove('hidden')
+        })
+      })
+
+      closeProBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (!proModal) return
+          proModal.classList.add('hidden')
+        })
+      })
+    </script>
+
+    <div class="fixed bottom-6 left-6 z-[80] hidden w-[520px] max-w-[calc(100vw-48px)] overflow-hidden rounded-2xl bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]" data-cookie-popup>
+      <div class="grid gap-4 p-6 sm:grid-cols-[1fr_120px] sm:items-center">
+        <div class="grid gap-2">
+          <p class="text-base font-semibold text-slate-900">Мы используем файлы <a href="#" class="text-sky-500 hover:text-sky-600">cookie</a>.</p>
+          <p class="text-sm text-slate-600">чтобы сайт работал лучше.</p>
+          <p class="text-sm text-slate-600">Продолжая, вы соглашаетесь с этим.</p>
+        </div>
+
+        <img src="/Cookie%20(1).png" alt="" aria-hidden="true" class="mx-auto h-auto w-full max-w-[110px]" loading="lazy" />
+      </div>
+      <button type="button" class="inline-flex h-12 w-full items-center justify-center text-base font-semibold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);" data-cookie-accept>
+        Принять
+      </button>
+    </div>
+  </body>
+</html>

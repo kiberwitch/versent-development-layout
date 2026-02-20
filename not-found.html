@@ -8,9 +8,12 @@
     <title>Versent — Страница не найдена</title>
   </head>
   <body>
-    <div class="relative min-h-dvh overflow-hidden text-slate-900">
+    <div class="relative min-h-dvh overflow-hidden bg-gradient-to-b from-sky-50 via-white to-slate-50 text-slate-900" style="
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;">
       <img
-        src="/%D1%84%D0%BE%D0%BD-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0-%D0%BD%D0%B5%D0%BD%D0%B0%D0%B9%D0%B4%D0%B5%D0%BD.png"
+        src="/background-page-not found.png"
         alt=""
         aria-hidden="true"
         class="pointer-events-none absolute inset-0 h-full w-full object-cover"
@@ -153,13 +156,13 @@
         >
           <div class="grid min-h-[420px] content-center gap-10 px-8 py-14 md:grid-cols-[1fr_420px] md:items-center md:px-12">
             <div class="grid gap-6">
-              <h1 class="text-2xl font-semibold text-slate-900">Страница не найдена</h1>
-              <p class="max-w-md text-xs leading-snug text-slate-500">
+              <h1 class="text-[32px] font-semibold text-slate-900">Страница не найдена</h1>
+              <p class=" text-[16px] leading-snug text-slate-500">
                 Возможно, страница была удалена или адрес введён неверно.
               </p>
               <a
                 href="/index.html"
-                class="inline-flex h-10 w-fit items-center justify-center rounded-lg px-6 text-sm font-semibold text-white shadow-[0_12px_22px_rgba(6,182,212,0.35)]"
+                class="inline-flex h-10 w-[210px] items-center justify-center rounded-lg px-6 text-sm font-semibold text-white shadow-[0_12px_22px_rgba(6,182,212,0.35)]"
                 style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);"
               >
                 На главную →
@@ -186,112 +189,12 @@
             <div>
               <p class="text-lg font-semibold text-slate-900">Оплати подписку,</p>
               <p class="text-lg font-semibold text-slate-900">чтобы получить доступ</p>
-              <button type="button" class="mt-6 inline-flex items-center justify-center rounded-xl bg-emerald-400 px-8 py-3 text-sm font-bold text-white hover:bg-emerald-500" data-open-tariffs>
+              <a href="/tariffs-modal-standalone.html" class="mt-6 inline-flex items-center justify-center rounded-xl px-8 py-3 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">
                 К выбору тарифа +
-              </button>
+              </a>
             </div>
 
             <img src="/Gemini_Generated_Image_wg0ql0wg0ql0wg0q%201.png" alt="" aria-hidden="true" class="mx-auto h-auto w-full max-w-[220px]" loading="lazy" />
-          </div>
-        </div>
-      </div>
-
-      <div class="fixed inset-0 z-[70] hidden" data-tariffs-modal>
-        <div class="absolute inset-0 bg-black">
-          <div class="absolute inset-0 opacity-80" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,1) 70%);"></div>
-        </div>
-
-        <div class="relative flex h-full flex-col">
-          <div class="flex items-center justify-between px-6 py-5">
-            <div class="flex items-center gap-3">
-              <img src="/icon.png" alt="" aria-hidden="true" class="h-8 w-8" loading="lazy" />
-              <p class="text-xl font-semibold text-white">Versent</p>
-            </div>
-
-            <button type="button" class="text-4xl font-medium leading-none text-white" aria-label="Закрыть" data-tariffs-close>
-              ×
-            </button>
-          </div>
-
-          <div class="flex-1 overflow-auto px-6 pb-10">
-            <h2 class="mt-2 text-center text-4xl font-extrabold tracking-tight text-white">Выберите тариф</h2>
-
-            <div class="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
-              <div class="relative">
-                <article class="relative flex flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
-                  <h3 class="relative z-10 text-lg font-bold text-slate-900">Пробный</h3>
-                  <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: Бесплатно (7 дней)</p>
-                  <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Доступ к базовым скриптам</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Автообновление</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Поддержка в Telegram</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Темная тема</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Белая метка (White-label)</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Пакетная обработка картинок</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сертификат PRO-пользователя</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Доступ к PRO-материалам</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сохранённые пресеты</span></li>
-                  </ul>
-                  <div class="relative z-10 mt-auto pt-10">
-                    <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Начать пробный период</button>
-                  </div>
-                  <img src="/подарка.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[175px]" loading="lazy" />
-                </article>
-              </div>
-
-              <div class="relative">
-                <div class="pointer-events-none absolute right-6 top-0 z-20 -translate-y-[65%] rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(270deg, #06f 0%, #003d99 100%)">PRO</div>
-                <article class="relative flex flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
-                  <h3 class="relative z-10 text-lg font-bold text-slate-900">Базовый</h3>
-                  <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: 300 ₽ / мес</p>
-                  <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Полный доступ ко всем скриптам</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Автообновление</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Поддержка в Telegram</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Темная тема</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Белая метка (White-label)</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Приоритетная поддержка</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сертификат PRO-пользователя</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Пакетная обработка картинок</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Создать более 1 слайда</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сохранённые пресеты</span></li>
-                  </ul>
-                  <div class="relative z-10 mt-auto pt-10">
-                    <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Выбрать</button>
-                  </div>
-                  <img src="/клавитура.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[175px]" loading="lazy" />
-                </article>
-              </div>
-
-              <div class="relative">
-                <div class="pointer-events-none absolute right-6 top-0 z-20 -translate-y-[65%] flex items-center gap-2">
-                  <span class="rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(135deg, #ff0900 0%, #ff724e 100%)">Самый популярный 🔥</span>
-                  <span class="rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(135deg, #ff724e 0%, #ffae00 100%)">PRO+</span>
-                </div>
-                <article class="relative flex flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
-                  <h3 class="relative z-10 text-lg font-bold text-slate-900">Профессиональный</h3>
-                  <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: 150 ₽ / мес <span class="text-[10px] text-slate-500">(на протяжении года)</span></p>
-                  <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Все функции Базового PRO</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Полный доступ к инструментам</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Открытый чат с разработчиками</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Создание до 3 слайдов</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Тест 2 скрипта из библиотеки</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Пакетная обработка изображений</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сохранённые пресеты</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сертификат PRO-пользователя</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Приоритетная поддержка</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>PRO-библиотека уроков</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Личный кабинет с аналитикой</span></li>
-                    <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Ранний доступ к новым функциям</span></li>
-                  </ul>
-                  <div class="relative z-10 mt-auto pt-10">
-                    <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Выбрать</button>
-                  </div>
-                  <img src="/кубак.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[190px]" loading="lazy" />
-                </article>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -354,8 +257,6 @@
             closeMenu()
             const modal = document.querySelector('[data-pro-modal]')
             if (modal && !modal.classList.contains('hidden')) modal.classList.add('hidden')
-            const tariffs = document.querySelector('[data-tariffs-modal]')
-            if (tariffs && !tariffs.classList.contains('hidden')) tariffs.classList.add('hidden')
           }
         })
 
@@ -419,11 +320,8 @@
         })
 
         const proModal = document.querySelector('[data-pro-modal]')
-        const tariffsModal = document.querySelector('[data-tariffs-modal]')
         const openProBtns = document.querySelectorAll('[data-open-pro-modal]')
         const closeProBtns = document.querySelectorAll('[data-pro-modal-close]')
-        const openTariffsBtns = document.querySelectorAll('[data-open-tariffs]')
-        const closeTariffsBtns = document.querySelectorAll('[data-tariffs-close]')
 
         openProBtns.forEach((btn) => {
           btn.addEventListener('click', () => {
@@ -437,21 +335,6 @@
           btn.addEventListener('click', () => {
             if (!proModal) return
             proModal.classList.add('hidden')
-          })
-        })
-
-        openTariffsBtns.forEach((btn) => {
-          btn.addEventListener('click', () => {
-            if (proModal && !proModal.classList.contains('hidden')) proModal.classList.add('hidden')
-            if (!tariffsModal) return
-            tariffsModal.classList.remove('hidden')
-          })
-        })
-
-        closeTariffsBtns.forEach((btn) => {
-          btn.addEventListener('click', () => {
-            if (!tariffsModal) return
-            tariffsModal.classList.add('hidden')
           })
         })
       </script>

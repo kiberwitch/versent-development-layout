@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>Versent — Тарифы</title>
+</head>
+
+<body class="min-h-dvh overflow-x-hidden bg-gradient-to-b from-sky-50 via-white to-slate-50 text-slate-900">
+
+  <script src="/tariffs-modal-loader.js" defer></script>
+  <script type="module">
+    await window.__tariffsReady
+
+    const tariffsModal = document.querySelector('[data-tariffs-modal]')
+
+    const openTariffs = () => {
+      if (!tariffsModal) return
+      tariffsModal.classList.remove('hidden')
+    }
+
+    const goHome = () => {
+      window.location.href = '/index.html'
+    }
+
+    const closeTariffsBtns = document.querySelectorAll('[data-tariffs-close]')
+    closeTariffsBtns.forEach((btn) => btn.addEventListener('click', goHome))
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') goHome()
+    })
+
+    openTariffs()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Личный кабинет</title>
+  </head>
+  <body>
+    <div class="relative min-h-dvh overflow-hidden bg-gradient-to-b from-sky-50 via-white to-slate-50 text-slate-900">
+      <div class="pointer-events-none absolute -left-28 top-28 h-72 w-72 rounded-full bg-indigo-300/30 blur-3xl"></div>
+      <div class="pointer-events-none absolute -left-36 bottom-24 h-96 w-96 rounded-full bg-purple-300/25 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-32 bottom-8 h-96 w-96 rounded-full bg-blue-300/25 blur-3xl"></div>
+
+      <header class="relative">
+        <div class="mx-auto max-w-[1236px] px-4 pt-4">
+          <div
+            class="relative flex items-center justify-between rounded-2xl border border-slate-200/70 bg-white/80 px-4 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur"
+          >
+            <div class="flex items-center gap-3">
+              <img src="/icon.png" alt="Логотип" class="h-7 w-7 shrink-0" loading="eager" />
+              <a href="/index.html" class="text-base font-medium tracking-tight">Versent</a>
+            </div>
+
+            <nav
+              aria-label="Основная навигация"
+              class="absolute left-1/2 hidden -translate-x-1/2 items-center justify-center gap-8 text-sm text-slate-500 sm:flex"
+            >
+              <a href="/index.html#lessons" class="hover:text-slate-900">Уроки</a>
+              <a href="/index.html#mods" class="hover:text-slate-900">Код</a>
+              <a href="/index.html#effects" class="hover:text-slate-900">Эффекты</a>
+              <a href="/index.html#demo" class="hover:text-slate-900">Демо</a>
+            </nav>
+
+            <div class="hidden items-center gap-4 sm:flex">
+              <div class="relative flex items-center">
+                <input
+                  aria-label="Поиск"
+                  placeholder="Поиск..."
+                  class="h-7 w-60 border-y border-slate-300 bg-transparent px-2 pr-8 text-sm text-slate-700 outline-none placeholder:text-slate-400"
+                />
+                <span
+                  aria-hidden="true"
+                  class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-500"
+                >
+                  ⌕
+                </span>
+              </div>
+
+              <a href="/index.html" class="text-[12px] text-slate-500 hover:text-slate-900">+ Вернуться на главную</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="relative mx-auto w-full max-w-[1236px] px-6 pb-12 pt-8">
+        <div
+          class="relative overflow-hidden rounded-3xl border border-slate-200/60 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.14)]"
+          style="background-image: url('/personal_account.png'); background-size: contain; background-position: right center; background-repeat: no-repeat;"
+        >
+          <div class="p-8">
+            <div class="flex items-center justify-between">
+              <div class="text-[12px] text-slate-500">
+                <a href="/index.html" class="hover:text-slate-900">Главная</a>
+                <span class="px-1">›</span>
+                <span class="text-slate-700">Личный кабинет</span>
+              </div>
+
+              <a href="/index.html" class="text-[12px] text-slate-500 hover:text-slate-900">+ Вернуться на главную</a>
+            </div>
+
+            <div class="mt-6 grid gap-10 lg:grid-cols-[1fr_520px] lg:items-start">
+              <div>
+                <h1 class="text-[32px] font-bold tracking-tight">Личный кабинет</h1>
+
+                <section class="mt-8">
+                  <h2 class="text-[18px] font-semibold">Информация о профиле</h2>
+                  <p class="mt-1 text-[12px] text-slate-500">Обновите вашу информацию и адрес электронной почты.</p>
+
+                  <div class="mt-6 grid gap-4">
+                    <label class="grid gap-2">
+                      <span class="text-[12px] text-slate-700">Имя</span>
+                      <input
+                        type="text"
+                        placeholder="Имя пользователя"
+                        class="h-11 w-full rounded-md border border-slate-200 bg-slate-50/40 px-4 text-[14px] text-slate-800 outline-none"
+                      />
+                    </label>
+
+                    <label class="grid gap-2">
+                      <span class="text-[12px] text-slate-700">Email</span>
+                      <input
+                        type="email"
+                        placeholder="Почта"
+                        class="h-11 w-full rounded-md border border-slate-200 bg-slate-50/40 px-4 text-[14px] text-slate-800 outline-none"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="mt-6 h-px w-full bg-slate-200"></div>
+                </section>
+
+                <section class="mt-8">
+                  <h2 class="text-[18px] font-semibold">Обновление пароля</h2>
+                  <p class="mt-1 text-[12px] text-slate-500">Убедитесь, что ваш пароль надёжен и сложен.</p>
+
+                  <div class="mt-6 grid gap-4">
+                    <label class="grid gap-2">
+                      <span class="text-[12px] text-slate-700">Текущий пароль</span>
+                      <input
+                        type="password"
+                        value="password"
+                        class="h-11 w-full rounded-md border border-slate-200 bg-slate-50/40 px-4 text-[14px] text-slate-800 outline-none"
+                      />
+                    </label>
+
+                    <label class="grid gap-2">
+                      <span class="text-[12px] text-slate-700">Новый пароль</span>
+                      <input
+                        type="password"
+                        class="h-11 w-full rounded-md border border-slate-200 bg-slate-50/40 px-4 text-[14px] text-slate-800 outline-none"
+                      />
+                    </label>
+
+                    <label class="grid gap-2">
+                      <span class="text-[12px] text-slate-700">Подтвердите пароль</span>
+                      <input
+                        type="password"
+                        class="h-11 w-full rounded-md border border-slate-200 bg-slate-50/40 px-4 text-[14px] text-slate-800 outline-none"
+                      />
+                    </label>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="mt-6 inline-flex h-10 w-[160px] items-center justify-center rounded-md bg-slate-300 text-[14px] font-semibold text-white"
+                  >
+                    Сохранить
+                  </button>
+                </section>
+
+                <div class="mt-10 flex justify-center">
+                  <div class="grid w-full max-w-[520px] grid-cols-2 gap-4">
+                    <a
+                      href="#"
+                      class="inline-flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-sky-500 px-6 text-[14px] font-semibold text-white"
+                    >
+                      <img src="/Telegram App (2).png" alt="" aria-hidden="true" class="h-6 w-6" loading="lazy" />
+                      Перейти в телеграм
+                    </a>
+
+                    <a
+                      href="#"
+                      class="inline-flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-slate-600 px-6 text-[14px] font-semibold text-white"
+                    >
+                      <img src="/notifications.png" alt="" aria-hidden="true" class="h-6 w-6" loading="lazy" />
+                      Обратная связь
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="ml-auto w-[520px] max-w-full">
+                  <div
+                    class="relative h-[190px] w-[426px] overflow-hidden rounded-2xl"
+                    style="background: linear-gradient(180deg, #a2a2a2 0%, #3c3c3c 100%); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 15px 15px 0 rgba(0, 0, 0, 0.09), 0 35px 21px 0 rgba(0, 0, 0, 0.05), 0 62px 25px 0 rgba(0, 0, 0, 0.01), 0 97px 27px 0 rgba(0, 0, 0, 0);"
+                  >
+                    <div class="absolute left-4 top-4 rounded-full px-4 py-1 text-[12px] font-semibold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Premium</div>
+
+                    <div class="px-6 pb-6 pt-14 text-white">
+                      <p class="text-[20px] font-semibold leading-none">Осталось 30 дней</p>
+
+                    <div class="mt-4 flex justify-center items-center gap-2 flex-col">
+                        <button
+                          type="button"
+                          class="mx-auto h-[34px] w-[398px] max-w-full rounded-lg text-[13px] font-semibold text-white"
+                          style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);"
+                        >
+                          Продлить подписку
+                        </button>
+
+                        <button
+                          type="button"
+                          class="mx-auto h-[34px] w-[398px] max-w-full rounded-lg bg-slate-500/70 text-[13px] font-semibold text-white"
+                        >
+                          Управление подпиской
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#"
+              class="absolute bottom-8 right-8 inline-flex h-12 items-center justify-center gap-3 rounded-xl bg-red-500 px-6 text-[14px] font-semibold text-white"
+            >
+              <img src="/Dalet.png" alt="" aria-hidden="true" class="h-6 w-6" loading="lazy" />
+              Удалить аккаунт
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <div
+        class="fixed bottom-6 z-50 flex items-center gap-4"
+        style="right: max(1.5rem, calc((100vw - 1236px) / 2 + 1.5rem))"
+      >
+        <a
+          href="#"
+          aria-label="VK"
+          class="grid   place-items-center rounded-xl shadow-[0_12px_30px_rgba(15,23,42,0.18)] hover:bg-sky-600"
+        >
+          <img src="/VK.png" alt="" aria-hidden="true" class="h-10 w-10" loading="lazy" />
+        </a>
+        <a
+          href="#"
+          aria-label="Telegram"
+          class="grid  place-items-center rounded-xl  shadow-[0_12px_30px_rgba(15,23,42,0.18)] hover:bg-sky-500"
+        >
+          <img src="/Telegram App (2).png" alt="" aria-hidden="true" class="h-10 w-10" loading="lazy" />
+        </a>
+        <a
+          href="#"
+          aria-label="YouTube"
+          class="grid   place-items-center rounded-xl shadow-[0_12px_30px_rgba(15,23,42,0.18)] hover:bg-red-600"
+        >
+          <img src="/YouTube (1).png" alt="" aria-hidden="true" class="h-10 w-10" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

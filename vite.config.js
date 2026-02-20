@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         interactive: resolve(__dirname, 'interactive.html'),
         bigVideo: resolve(__dirname, 'big-video.html'),
+        support: resolve(__dirname, 'support.html'),
       },
     },
   },

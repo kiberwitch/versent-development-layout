@@ -12,7 +12,7 @@
 <body>
   <div class="relative min-h-dvh overflow-hidden bg-gradient-to-b from-sky-50 via-white to-slate-50 text-slate-900"
     style="
-        background-image: url('/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20(11).png');
+        background-image: url('/Home_background.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
@@ -42,7 +42,8 @@
                 class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-slate-500">⌕</span>
             </div>
 
-            <button type="button" aria-label="Открыть меню" class="grid h-9 w-10 place-items-center" data-header-menu-toggle>
+            <button type="button" aria-label="Открыть меню" class="grid h-9 w-10 place-items-center"
+              data-header-menu-toggle>
               <span class="grid gap-1">
                 <span class="h-0.5 w-6 rounded bg-slate-700"></span>
                 <span class="h-0.5 w-6 rounded bg-slate-700"></span>
@@ -53,7 +54,8 @@
         </div>
 
         <div class="fixed z-50 hidden w-[360px] max-w-[calc(100vw-32px)]" data-header-menu-panel>
-          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]">
+          <div
+            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]">
             <div class="flex items-center justify-between gap-4 px-4 pt-4">
               <div class="flex items-center gap-2">
                 <img src="/icon.png" alt="" aria-hidden="true" class="h-6 w-6" loading="lazy" />
@@ -63,49 +65,63 @@
                 <a href="#" aria-label="VK" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
                   <img src="/VK.png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
                 </a>
-                <a href="#" aria-label="Telegram" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                <a href="#" aria-label="Telegram"
+                  class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
                   <img src="/Telegram App (2).png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
                 </a>
-                <a href="#" aria-label="YouTube" class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
+                <a href="#" aria-label="YouTube"
+                  class="inline-flex h-7 w-7 items-center justify-center hover:opacity-80">
                   <img src="/YouTube (1).png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
                 </a>
               </div>
             </div>
 
             <div class="mt-3 px-4">
-              <div
-                class="relative grid grid-cols-2 overflow-hidden rounded-xl p-1 text-sm font-semibold"
-                style="background: #0bf;"
-              >
-                <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="mods"><span data-menu-tab-label>Модификации</span></button>
-                <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="settings"><span data-menu-tab-label>Настройки</span></button>
-                <div aria-hidden="true" class="pointer-events-none absolute bottom-2 left-0 h-[2px] w-0 opacity-0" style="background: #fff;" data-menu-tab-underline></div>
+              <div class="relative grid grid-cols-2 overflow-hidden rounded-xl p-1 text-sm font-semibold"
+                style="background: #0bf;">
+                <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="mods"><span
+                    data-menu-tab-label>Модификации</span></button>
+                <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="settings"><span
+                    data-menu-tab-label>Настройки</span></button>
+                <div aria-hidden="true" class="pointer-events-none absolute bottom-2 left-0 h-[2px] w-0 opacity-0"
+                  style="background: #fff;" data-menu-tab-underline></div>
               </div>
             </div>
 
             <div class="px-4 pb-4 pt-4">
               <div data-menu-tab="mods">
-                <div class="rounded-xl bg-slate-50 p-3 text-xs text-slate-600" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                <div class="rounded-xl bg-slate-50 p-3 text-xs text-slate-600"
+                  style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
                   <p>Имя пользователя: Ник</p>
                   <p class="mt-1">Почта: Почта</p>
                 </div>
 
-                <button
-                  type="button"
+                <button type="button"
                   class="mt-4 inline-flex h-9 w-full items-center justify-center rounded-xl text-sm font-bold text-white"
                   data-open-pro-modal
-                  style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);"
-                >
+                  style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
                   Улучшить до Pro+
                 </button>
 
                 <div class="mt-4 grid grid-cols-2 gap-3">
-                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 1</div>
-                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 2</div>
-                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 3</div>
-                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 4</div>
-                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Скрипт 5</div>
-                  <div class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">Создать шаблон</div>
+                  <div
+                    class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">
+                    Скрипт 1</div>
+                  <div
+                    class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">
+                    Скрипт 2</div>
+                  <div
+                    class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">
+                    Скрипт 3</div>
+                  <div
+                    class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">
+                    Скрипт 4</div>
+                  <div
+                    class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">
+                    Скрипт 5</div>
+                  <div
+                    class="grid h-20 place-items-center rounded-xl border border-slate-200 bg-white text-[11px] text-slate-400">
+                    Создать шаблон</div>
                 </div>
 
                 <p class="mt-4 text-[10px] text-slate-500">Нашли ошибку или хотите что-то предложить? Напишите нам</p>
@@ -114,28 +130,41 @@
               <div class="hidden" data-menu-tab="settings">
                 <p class="text-[11px] font-semibold text-slate-700">Общие</p>
                 <div class="mt-2 grid gap-2 text-[11px] text-slate-600">
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> id блоков</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> возможность добавлять комментарии к блокам</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> reset блоков</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> тёмная тема для этого блока</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> линии для этого блока</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> id блоков</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> возможность добавлять комментарии к
+                    блокам</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> reset блоков</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> тёмная тема для этого блока</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> линии для этого блока</label>
                 </div>
 
                 <p class="mt-4 text-[11px] font-semibold text-slate-700">Меню редактора (Справа)</p>
                 <div class="mt-2 grid gap-2 text-[11px] text-slate-600">
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Показать кнопки быстрой публикации</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть предпросмотр</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть опубликованное</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть настройки</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть помощь</label>
-                  <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть ещё</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> Показать кнопки быстрой публикации</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть предпросмотр</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть опубликованное</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть настройки</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть помощь</label>
+                  <label class="flex items-center gap-2"><input type="checkbox"
+                      class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть ещё</label>
                 </div>
 
-                <button type="button" class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-slate-500 px-4 py-2 text-[11px] font-semibold text-white hover:bg-slate-600">Применить</button>
+                <button type="button"
+                  class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-slate-500 px-4 py-2 text-[11px] font-semibold text-white hover:bg-slate-600">Применить</button>
 
                 <div class="mt-4 flex items-center justify-between gap-3">
                   <p class="text-[10px] text-slate-500">Оплати подписку, чтобы получить доступ</p>
-              
+
                 </div>
               </div>
             </div>
@@ -185,8 +214,8 @@
           <h3 class="text-[20px] font-bold text-slate-900">Шаг 1: Подготовьте блок TE225</h3>
 
           <div class="mt-6 grid min-w-0 gap-8 md:grid-cols-[1fr_1px_480px] md:items-start">
-            <div class="min-w-0">
-              <p class="text-sm leading-snug text-slate-700">
+            <div class="min-w-0 pt-6">
+              <p class="text-[16px] leading-snug text-slate-700">
                 Задайте CSS-класс «custom-logo» для блока. Для этого нажмите кнопку настройки блока и найдите строку для
                 ввода CSS-класса.
                 Прикрепите промокод ниже. Затем заполните блок нужными вам логотипами компании.
@@ -195,11 +224,12 @@
               <div class="mt-5 w-full overflow-hidden rounded-xl bg-amber-100">
                 <div class="flex items-start justify-between gap-6 p-5">
                   <div>
-                    <p class="text-base font-bold text-slate-900">Совет:</p>
-                    <p class="mt-2 text-sm leading-snug text-slate-700">Загружайте логотипы в одном размере и качестве —
+                    <p class="text-[26px] font-[600] text-slate-900">Совет:</p>
+                    <p class="mt-2 text-[16px] leading-snug text-slate-700">Загружайте логотипы в одном размере и
+                      качестве —
                       это поможет получить аккуратный результат.</p>
                   </div>
-                  <img src="/лампочка.png" alt="" aria-hidden="true" class="h-20 w-20 shrink-0" loading="lazy" />
+                  <img src="/honey.png" alt="" aria-hidden="true" class="h-20 w-20 shrink-0" loading="lazy" />
                 </div>
               </div>
             </div>
@@ -207,7 +237,7 @@
             <div class="hidden md:block self-stretch w-px bg-slate-400"></div>
 
             <div class="min-w-0 w-full max-w-full overflow-hidden rounded-2xl border border-slate-200 bg-white">
-              <img src="/светы.png" alt="" aria-hidden="true" class="h-auto w-full rounded-xl object-cover"
+              <img src="/lights.png" alt="" aria-hidden="true" class="h-auto w-full rounded-xl object-cover"
                 loading="lazy" />
             </div>
           </div>
@@ -216,31 +246,29 @@
         <div class="mt-10 h-px w-full bg-slate-400"></div>
 
         <section class="mt-6">
-          <h3 class="text-[20px] font-bold text-slate-900">Шаг 2: Создайте блок с html кодом и скопируйте его</h3>
+          <h3 class="text-[22px] font-bold text-slate-900 md:text-[26px]">Шаг 2: Создайте блок с html кодом и скопируйте
+            его</h3>
 
           <div class="mt-6 grid min-w-0 gap-8 md:grid-cols-[1fr_1px_480px] md:items-start">
             <div class="min-w-0">
-              <p class="text-sm leading-relaxed text-slate-700">
+              <p class="text-[16px] font-medium leading-relaxed text-slate-700 md:text-[17px]">
                 Это самый важный шаг! Вам нужно создать HTML-блок в нижней части страницы сайта и скопировать в него
                 подготовленный нами код.
               </p>
 
               <div class="mt-6 h-px w-full bg-slate-400"></div>
 
-              <div class="mt-6 overflow-hidden rounded-2xl bg-slate-300/70">
-                <div class="flex items-center justify-between gap-3 bg-slate-300/80 px-4 py-2">
-                  <span class="text-[11px] font-semibold text-slate-700">HTML</span>
+              <div class="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-[#E2E2E2]">
+                <div class="flex items-center justify-between gap-3 bg-[#E2E2E2] px-4 py-2">
+                  <span class="text-[11px] font-semibold text-slate-900">HTML</span>
                   <button type="button"
-                    class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-slate-400/60 text-slate-800 hover:bg-slate-400/80"
+                    class="inline-flex h-8 w-8 items-center justify-center rounded-md text-slate-900 hover:bg-white"
                     aria-label="Копировать HTML" data-copy-btn data-copy-target="step2-html">
-                    <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
-                      <path d="M9 9h10v10H9V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                      <path d="M5 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v0" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" />
-                    </svg>
+                    <img src="/Copy.png" alt="" aria-hidden="true" class="h-5 w-5" loading="lazy" />
                   </button>
                 </div>
-                <pre id="step2-html" class="whitespace-pre-wrap px-4 pb-5 text-[11px] leading-relaxed text-slate-700">
+                <pre id="step2-html"
+                  class="whitespace-pre-wrap bg-[#C8C8C8] px-4 pb-5 pt-3 text-[11px] leading-relaxed text-slate-900">
 &lt;style>
 :root{
   --dbmSliderRunPadding: 40px; /*Отступ всего контейнера от края экрана на десктопе*/
@@ -274,77 +302,81 @@
           <h2 class="text-[22px] font-bold leading-snug text-slate-900 md:text-[28px]">Готово! Теперь вы смогли
             разместить бегущую строку на своем сайте!</h2>
 
-          <div class="mt-6 grid min-w-0 gap-8 md:grid-cols-[1fr_1px_480px] md:items-start">
+          <div class="mt-6 grid min-w-0 gap-8 md:grid-cols-[1fr_1px_518px] md:items-start">
             <div class="min-w-0 pt-6 md:pt-16">
-              <p class="text-sm leading-snug text-slate-700">
+              <p class="text-[16px] leading-snug text-slate-700">
                 Вы только что преодолели ограничения платформы. Без подписок на сервисы, без сложных настроек и без
                 навыков программирования.
               </p>
 
               <div class="mt-5 h-px w-full bg-slate-400"></div>
 
-              <p class="mt-5 text-sm leading-snug text-slate-700">
+              <p class="mt-5 text-[16px] leading-snug text-slate-700">
                 Это простое, но мощное обновление, которое мгновенно привлекает внимание к главному — акциям, новостям
                 или срочным сообщениям.
               </p>
 
               <div class="mt-5 h-px w-full bg-slate-400"></div>
 
-              <p class="mt-5 text-sm leading-snug text-slate-700">Удачи в создании крутых сайтов! 🚀</p>
+              <p class="mt-5 text-[16px] leading-snug text-slate-700">Удачи в создании крутых сайтов! 🚀</p>
             </div>
 
             <div class="hidden md:block self-stretch w-px bg-slate-400"></div>
 
-            <div class="overflow-hidden rounded-2xl border border-slate-400 bg-black">
-              <div class="relative">
-                <img src="/image 1.png" alt="" aria-hidden="true" class="block h-auto w-full" loading="lazy" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6">
-                  <p class="text-[24px] font-semibold leading-tight text-white">Подключу видео за 1 день</p>
-                  <p class="mt-1 text-[20px] font-semibold leading-tight text-white/95">— без программирования</p>
-                  <a
-                    href="#"
-                    class="mt-5 inline-flex w-fit items-center justify-center rounded-full border-2 border-sky-200 bg-sky-100 px-9 py-3 text-base font-bold text-sky-700 shadow-[0_12px_25px_rgba(14,165,233,0.20)] hover:bg-sky-200"
-                    >Подробнее+</a>
+            <div
+              class="overflow-hidden rounded-2xl border border-slate-400 bg-black md:h-[335px] md:w-[518px] md:justify-self-start">
+              <div class="relative h-full">
+                <img src="/image 1.png" alt="" aria-hidden="true" class="block h-full w-full object-cover"
+                  loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 flex flex-col items-start text-left">
+                  <p class="text-[32px] font-semibold leading-tight text-white">Подключу видео за 1 день</p>
+                  <p class="mt-1 text-[32px] font-semibold leading-tight text-white">— без программирования</p>
+                  <a href="#"
+                    class="mt-5 inline-flex h-[54px] w-[293px] items-center justify-center rounded-full bg-[rgba(0,187,255,0.15)] text-[20px] font-semibold text-white hover:bg-[rgba(0,187,255,0.20)]">
+                    Подробнее →
+                  </a>
+
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="mt-10" aria-labelledby="support-title">
+        <section class="mt-8" aria-labelledby="support-title">
           <div
             class="overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.14)]">
             <div class="grid gap-6 md:grid-cols-[1fr_320px] md:items-center">
               <div>
-                <h2 id="support-title" class="text-xl font-semibold text-slate-900">Поддержать проект</h2>
-                <p class="mt-3 max-w-xl text-sm leading-snug text-slate-600">
+                <h2 id="support-title" class="text-[29px] font-bold  ">Поддержать проект</h2>
+                <p class="mt-3 max-w-xl text-[14] leading-snug text-slate-700">
                   Если статья помогла — вы можете поблагодарить любой суммой. Это мотивирует писать больше таких гайдов!
                 </p>
 
                 <div class="mt-5 flex flex-wrap gap-2" role="group" aria-label="Сумма" data-donation-group>
                   <button type="button" data-donation="100" aria-pressed="false"
-                    class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">100
+                    class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-[20px] font-medium text-slate-700 hover:bg-slate-200">100
                     ₽</button>
                   <button type="button" data-donation="300" aria-pressed="true"
-                    class="donation-btn rounded-xl bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow-[0_10px_20px_rgba(6,182,212,0.30)]">
+                    class="donation-btn rounded-xl px-5 py-2 text-[20px] font-semibold text-slate-900  ]"
+                    style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">
                     300 ₽
                   </button>
                   <button type="button" data-donation="500" aria-pressed="false"
-                    class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">500
+                    class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-[20px] font-medium text-slate-700 hover:bg-slate-200">500
                     ₽</button>
                   <button type="button" data-donation="custom" aria-pressed="false"
-                    class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">Своя
+                    class="donation-btn rounded-xl bg-slate-100 px-5 py-2 text-[20px] font-medium text-slate-700 hover:bg-slate-200">Своя
                     сумма</button>
                 </div>
 
-                <button type="button"
-                  class="mt-5 inline-flex min-w-[200px] items-center justify-center rounded-xl bg-black px-10 py-2.5 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(0,0,0,0.18)] hover:bg-slate-900">
+                <a href="/support.html"
+                  class="mt-5 inline-flex min-w-[100px] items-center justify-center rounded-xl bg-black px-10 py-2.5 text-[20px] font-semibold text-white shadow-[0_12px_24px_rgba(0,0,0,0.18)] hover:bg-slate-900">
                   Поблагодарить
-                </button>
+                </a>
               </div>
 
-              <img src="/Gemini_Generated_Image_7z5mpl7z5mpl7z5m-Photoroom%201.png"
+              <img src="/heart%20_logo.png"
                 alt="Иллюстрация для блока поддержки" class="mx-auto h-auto w-full max-w-[320px] rounded-3xl"
                 loading="lazy" />
             </div>
@@ -356,118 +388,20 @@
 
   <div class="fixed inset-0 z-[60] hidden" data-pro-modal>
     <div class="absolute inset-0 bg-black/60" data-pro-modal-close></div>
-    <div class="relative mx-auto mt-20 w-[720px] max-w-[calc(100vw-32px)] overflow-hidden rounded-3xl bg-white shadow-[0_28px_90px_rgba(15,23,42,0.35)]">
+    <div
+      class="relative mx-auto mt-20 w-[720px] max-w-[calc(100vw-32px)] overflow-hidden rounded-3xl bg-white shadow-[0_28px_90px_rgba(15,23,42,0.35)]">
       <div class="grid gap-6 p-8 md:grid-cols-[1fr_220px] md:items-center">
         <div>
           <p class="text-lg font-semibold text-slate-900">Оплати подписку,</p>
           <p class="text-lg font-semibold text-slate-900">чтобы получить доступ</p>
-          <button type="button" class="mt-6 inline-flex items-center justify-center rounded-xl bg-emerald-400 px-8 py-3 text-sm font-bold text-white hover:bg-emerald-500" data-open-tariffs>
+          <a href="/tariffs-modal-standalone.html"
+            class="mt-6 inline-flex items-center justify-center rounded-xl px-8 py-3 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">
             К выбору тарифа +
-          </button>
+          </a>
         </div>
 
-        <img src="/Gemini_Generated_Image_wg0ql0wg0ql0wg0q 1.png" alt="" aria-hidden="true" class="mx-auto h-auto w-full max-w-[220px]" loading="lazy" />
-      </div>
-    </div>
-  </div>
-
-  <div class="fixed inset-0 z-[70] hidden" data-tariffs-modal>
-      <div class="absolute inset-0 bg-black">
-        <div class="absolute inset-0 opacity-80" style="background: radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,1) 70%);"></div>
-      </div>
-
-      <div class="relative flex h-full flex-col">
-        <div class="flex items-center justify-between px-6 py-5">
-          <div class="flex items-center gap-3">
-            <img src="/icon.png" alt="" aria-hidden="true" class="h-8 w-8" loading="lazy" />
-            <p class="text-xl font-semibold text-white">Versent</p>
-          </div>
-
-          <button type="button" class="text-4xl font-medium leading-none text-white" aria-label="Закрыть" data-tariffs-close>
-            ×
-          </button>
-        </div>
-
-        <div class="flex-1 overflow-auto px-6 pb-10">
-          <h2 class="mt-2 text-center text-4xl font-extrabold tracking-tight text-white">Выберите тариф</h2>
-
-          <div class="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
-            <div class="relative">
-              <article class="relative flex h-[500px] flex-col overflow-hidden rounded-2xl bg-white p-6 pb-20 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
-                <h3 class="relative z-10 text-lg font-bold text-slate-900">Пробный</h3>
-                <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: Бесплатно (7 дней)</p>
-                <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Доступ к базовым скриптам</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Автообновление</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Поддержка в Telegram</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Темная тема</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Белая метка (White-label)</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Пакетная обработка картинок</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сертификат PRO-пользователя</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Доступ к PRO-материалам</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сохранённые пресеты</span></li>
-                </ul>
-                <div class="relative z-10 mt-auto pt-10">
-                  <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Начать пробный период</button>
-                </div>
-                <img src="/подарка.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[175px]" loading="lazy" />
-              </article>
-            </div>
-
-            <div class="relative">
-              <div class="pointer-events-none absolute right-6 top-0 z-20 -translate-y-[65%] rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(270deg, #06f 0%, #003d99 100%)">PRO</div>
-              <article class="relative flex   flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
-                <h3 class="relative z-10 text-lg font-bold text-slate-900">Базовый</h3>
-                <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: 300 ₽ / мес</p>
-                <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Полный доступ ко всем скриптам</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Автообновление</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Поддержка в Telegram</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Темная тема</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Белая метка (White-label)</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Приоритетная поддержка</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сертификат PRO-пользователя</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Пакетная обработка картинок</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Создать более 1 слайда</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">❌</span><span>Сохранённые пресеты</span></li>
-                </ul>
-                <div class="relative z-10 mt-auto pt-10">
-                  <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Выбрать</button>
-                </div>
-                <img src="/клавитура.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[175px]" loading="lazy" />
-              </article>
-            </div>
-
-            <div class="relative">
-              <div class="pointer-events-none absolute right-6 top-0 z-20 -translate-y-[65%] flex items-center gap-2">
-                <span class="rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(135deg, #ff0900 0%, #ff724e 100%)">Самый популярный 🔥</span>
-                <span class="rounded-md px-2 py-1 text-[10px] font-bold text-white" style="background: linear-gradient(135deg, #ff724e 0%, #ffae00 100%)">PRO+</span>
-              </div>
-              <article class="relative flex   flex-col overflow-hidden rounded-2xl bg-white p-6 pb-4 shadow-[0_30px_80px_rgba(0,0,0,0.55)]">
-                <h3 class="relative z-10 text-lg font-bold text-slate-900">Профессиональный</h3>
-                <p class="relative z-10 mt-1 text-xs text-slate-600">Цена: 150 ₽ / мес <span class="text-[10px] text-slate-500">(на протяжении года)</span></p>
-                <ul class="relative z-10 mt-4 space-y-2 text-xs text-slate-700">
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Все функции Базового PRO</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Полный доступ к инструментам</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Открытый чат с разработчиками</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Создание до 3 слайдов</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Тест 2 скрипта из библиотеки</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Пакетная обработка изображений</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сохранённые пресеты</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Сертификат PRO-пользователя</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Приоритетная поддержка</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>PRO-библиотека уроков</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Личный кабинет с аналитикой</span></li>
-                  <li class="flex items-start gap-2"><span class="mt-[1px]">✅</span><span>Ранний доступ к новым функциям</span></li>
-                </ul>
-                <div class="relative z-10 mt-auto pt-10">
-                  <button type="button" class="mx-auto inline-flex w-[220px] max-w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-bold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">Выбрать</button>
-                </div>
-                <img src="/кубак.png" alt="" aria-hidden="true" class="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[190px]" loading="lazy" />
-              </article>
-            </div>
-          </div>
-        </div>
+        <img src="/Gemini_Generated_Image_wg0ql0wg0ql0wg0q 1.png" alt="" aria-hidden="true"
+          class="mx-auto h-auto w-full max-w-[220px]" loading="lazy" />
       </div>
     </div>
   </div>
@@ -573,8 +507,6 @@
         closeMenu()
         const modal = document.querySelector('[data-pro-modal]')
         if (modal && !modal.classList.contains('hidden')) modal.classList.add('hidden')
-        const tariffs = document.querySelector('[data-tariffs-modal]')
-        if (tariffs && !tariffs.classList.contains('hidden')) tariffs.classList.add('hidden')
       }
     })
 
@@ -640,11 +572,8 @@
     })
 
     const proModal = document.querySelector('[data-pro-modal]')
-    const tariffsModal = document.querySelector('[data-tariffs-modal]')
     const openProBtns = document.querySelectorAll('[data-open-pro-modal]')
     const closeProBtns = document.querySelectorAll('[data-pro-modal-close]')
-    const openTariffsBtns = document.querySelectorAll('[data-open-tariffs]')
-    const closeTariffsBtns = document.querySelectorAll('[data-tariffs-close]')
 
     openProBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
@@ -658,21 +587,6 @@
       btn.addEventListener('click', () => {
         if (!proModal) return
         proModal.classList.add('hidden')
-      })
-    })
-
-    openTariffsBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        if (proModal && !proModal.classList.contains('hidden')) proModal.classList.add('hidden')
-        if (!tariffsModal) return
-        tariffsModal.classList.remove('hidden')
-      })
-    })
-
-    closeTariffsBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        if (!tariffsModal) return
-        tariffsModal.classList.add('hidden')
       })
     })
   </script>
