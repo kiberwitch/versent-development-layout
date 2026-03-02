@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/versent.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <title>Кастомные блоки — Versent</title>
+    <meta name="description" content="Кастомные блоки для тильды с уникальной структурой, анимацией и логикой"/>
+    <link rel="stylesheet" href="/src/style.css"/>
+</head>
+<body class="font-montserrat"
+      style="background: image-set(url(../src/assets/img/bg/BG.webp) 1x, url(../src/assets/img/bg/BG.png) 1x), linear-gradient(180deg, #e0fffc 0%, #f5fffe 2.88%); background-repeat: no-repeat; background-position: top; background-size: cover;"
+>
+<div class="mx-auto max-w-[1236px]">
+    <!-- Header -->
+    <header class="py-2 px-6 rounded-2xl shadow-[0_2px_4px_0_rgba(0,0,0,0.1),0_7px_7px_0_rgba(0,0,0,0.09),0_16px_10px_0_rgba(0,0,0,0.05),0_29px_12px_0_rgba(0,0,0,0.01),0_45px_13px_0_rgba(0,0,0,0),0_-4px_12px_0_rgba(0,0,0,0.05)] mt-[77px] bg-white">
+        <div class="flex justify-between items-center">
+            <a href="../index.html" class="flex gap-4 items-center">
+                <img src="../src/assets/img/icons/versent.svg" alt="versent-icon">
+                <img src="../src/assets/img/icons/Versent-icon.svg" alt="versent">
+            </a>
+            <div>
+                <nav>
+                    <ul class="flex gap-8 items-center font-light text-[#6C757D] text-[16px]">
+                        <li><a href="#">Уроки</a></li>
+                        <li><a href="#">Код</a></li>
+                        <li><a href="#">Эффекты</a></li>
+                        <li><a href="#">Демо</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex justify-between gap-8 items-center">
+                <form role="search" action="/search" method="get" role="search">
+                    <label class="relative">
+                        <input type="search" placeholder="Поиск..."
+                               class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-montserrat placeholder:font-light placeholder:text-[15px] text-[15px] pr-[36px]">
+                        <img src="../src/assets/img/icons/search.svg" alt="search"
+                             class="absolute right-[10px] top-[2px] pointer-events-none">
+                    </label>
+                </form>
+                <div class="flex flex-col gap-[6px] cursor-pointer">
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="mt-[63px] [box-shadow:0_8px_17px_0_rgba(0,0,0,0.05),0_31px_31px_0_rgba(0,0,0,0.04),0_71px_42px_0_rgba(0,0,0,0.03),0_126px_50px_0_rgba(0,0,0,0.01),0_196px_55px_0_rgba(0,0,0,0)] bg-[#FAFAFA] rounded-3xl pb-6 mb-16 mt-[10px]">
+
+        <!-- Page header / breadcrumb -->
+        <div class="flex flex-col gap-4 p-6">
+            <div class="flex justify-between items-start w-full">
+                <p class="text-[14px] font-normal">
+                    <a href="/index.html" class="text-[#898989] underline">Главная</a>
+                    <span class="text-[#898989]"> → </span>
+                    <span class="text-[#272727]">Кастомные блоки с контентом</span>
+                </p>
+                <a href="/index.html" class="text-[#2D2D2D] text-[14px] font-normal">+ Вернуться на главную</a>
+            </div>
+
+            <div class="flex flex-col gap-[13px] w-full">
+                <h1 class="text-[#212529] font-bold text-[32px] tracking-[-0.96px]">Кастомные блоки для тильды</h1>
+                <p class="text-[#222] font-medium text-[20px] tracking-[-0.4px] ">
+                    Полный уход от шаблонности. Создавайте блоки с уникальной структурой, анимацией и логикой,<br>
+                    которые идеально соответствуют дизайну вашего бренда, а не ограничениям платформы.
+                </p>
+            </div>
+
+            <p class="text-black font-bold text-[16px]">фильтр: Zero Block | Блок - TE255 | Решения в два клика |</p>
+        </div>
+
+        <!-- Divider -->
+        <div class="w-full h-0 opacity-100 border border-[#A6A6A6]"></div>
+
+        <!-- Cards grid -->
+        <section class="p-6">
+            <div class="flex flex-wrap gap-8">
+
+                <!-- Card: Слайдеры -->
+                <div class="block-card relative w-[360px] h-[521px] rounded-2xl overflow-hidden flex-shrink-0"
+                     style="background: linear-gradient(318deg, #8C8C8C -13.86%, #F6F6F6 27.33%); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.10), 0 15px 15px 0 rgba(0,0,0,0.09), 0 35px 21px 0 rgba(0,0,0,0.05), 0 62px 25px 0 rgba(0,0,0,0.01), 0 97px 27px 0 rgba(0,0,0,0);">
+                    <img class="absolute top-[10px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] object-contain"
+                         src="../src/assets/img/customBlocks/CustomCardImg1.png"
+                         alt="CustomCardImg1.png">
+                    <div class="card-badges absolute left-[18px] top-[320px] flex gap-2 flex-wrap">
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full   bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Стандартный блок</span>
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full  bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Эксклюзивный</span>
+                    </div>
+                    <h3 class="card-title absolute left-[20px] top-[363px] text-[#212529] font-semibold text-[24px] tracking-[-0.48px]">
+                        Слайдеры</h3>
+                    <a href="#"
+                       class="card-apply-btn absolute bottom-0 left-0 flex items-center justify-center px-[45px] py-[15px] text-white font-semibold text-[20px] tracking-[-0.4px]"
+                       style="background: linear-gradient(90deg, #00FFC3 0%, #00BBFF 100%); border-radius: 0 16px 0 0;">
+                        Применить +
+                    </a>
+                </div>
+
+                <!-- Card: Бегущая строка из логотипов компаний -->
+                <div class="block-card relative w-[360px] h-[521px] rounded-2xl overflow-hidden flex-shrink-0"
+                     style="background: linear-gradient(318deg, #8C8C8C -13.86%, #F6F6F6 27.33%); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.10), 0 15px 15px 0 rgba(0,0,0,0.09), 0 35px 21px 0 rgba(0,0,0,0.05), 0 62px 25px 0 rgba(0,0,0,0.01), 0 97px 27px 0 rgba(0,0,0,0);">
+                    <img class="absolute top-[10px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] object-contain"
+                         src="../src/assets/img/customBlocks/CustomCardImg2.png"
+                         alt="Бегущая строка">
+                    <div class="card-badges absolute left-[18px] top-[314px] flex gap-2 flex-wrap">
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full  bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Zero-block</span>
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full  bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Интерактивный</span>
+                    </div>
+                    <h3 class="card-title absolute left-[20px] top-[363px] text-[#212529] font-semibold text-[24px] tracking-[-0.48px] leading-tight w-[280px]">
+                        Бегущая строка из логотипов компаний</h3>
+                    <a href="#"
+                       class="card-apply-btn absolute bottom-0 left-0 flex items-center justify-center px-[45px] py-[15px] text-white font-semibold text-[20px] tracking-[-0.4px]"
+                       style="background: linear-gradient(90deg, #00FFC3 0%, #00BBFF 100%); border-radius: 0 16px 0 0;">
+                        Применить +
+                    </a>
+                </div>
+
+                <!-- Card: Карточки товаров в Zero Block -->
+                <div class="block-card relative w-[360px] h-[521px] rounded-2xl overflow-hidden flex-shrink-0"
+                     style="background: linear-gradient(318deg, #8C8C8C -13.86%, #F6F6F6 27.33%); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.10), 0 15px 15px 0 rgba(0,0,0,0.09), 0 35px 21px 0 rgba(0,0,0,0.05), 0 62px 25px 0 rgba(0,0,0,0.01), 0 97px 27px 0 rgba(0,0,0,0);">
+                    <img class="absolute top-[10px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] object-contain"
+                         src="../src/assets/img/customBlocks/CustomCardImg3.png"
+                         alt="Карточки товаров">
+                    <div class="card-badges absolute left-[18px] top-[314px] flex gap-2 flex-wrap">
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full   bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Уникальный</span>
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full   bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Zero-block</span>
+                    </div>
+                    <h3 class="card-title absolute left-[20px] top-[363px] text-[#212529] font-semibold text-[24px] tracking-[-0.48px] leading-tight w-[280px]">
+                        Карточки товаров в Zero Block</h3>
+                    <a href="#"
+                       class="card-apply-btn absolute bottom-0 left-0 flex items-center justify-center px-[45px] py-[15px] text-white font-semibold text-[20px] tracking-[-0.4px]"
+                       style="background: linear-gradient(90deg, #00FFC3 0%, #00BBFF 100%); border-radius: 0 16px 0 0;">
+                        Применить +
+                    </a>
+                </div>
+
+                <!-- Card: Красивая обводка элементов -->
+                <div class="block-card relative w-[360px] h-[521px] rounded-2xl overflow-hidden flex-shrink-0"
+                     style="background: linear-gradient(318deg, #8C8C8C -13.86%, #F6F6F6 27.33%); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.10), 0 15px 15px 0 rgba(0,0,0,0.09), 0 35px 21px 0 rgba(0,0,0,0.05), 0 62px 25px 0 rgba(0,0,0,0.01), 0 97px 27px 0 rgba(0,0,0,0);">
+                    <img class="absolute top-[10px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] object-contain"
+                         src="../src/assets/img/customBlocks/CustomCardImg4.png"
+                         alt="Красивая обводка">
+                    <div class="card-badges absolute left-[18px] top-[314px] flex gap-2 flex-wrap">
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full    bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Интерактивный</span>
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full    bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white   font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Простая</span>
+                    </div>
+                    <h3 class="card-title absolute left-[20px] top-[363px] text-[#212529] font-semibold text-[24px] tracking-[-0.48px] leading-tight w-[280px]">
+                        Красивая обводка элементов</h3>
+                    <a href="#"
+                       class="card-apply-btn absolute bottom-0 left-0 flex items-center justify-center px-[45px] py-[15px] text-white font-semibold text-[20px] tracking-[-0.4px]"
+                       style="background: linear-gradient(90deg, #00FFC3 0%, #00BBFF 100%); border-radius: 0 16px 0 0;">
+                        Применить +
+                    </a>
+                    <div class="opacity-75 absolute inset-0 flex items-center justify-center rounded-2xl"
+                         style="background: rgba(0, 208, 255, 0.15); backdrop-filter: blur(2px); opacity: 0.75;">
+                        <img src="../src/assets/img/icons/Lock.svg" alt="Lock.svg">
+                    </div>
+                </div>
+
+                <!-- Card: Кастомный каталог (LOCKED) -->
+                <div class="block-card relative w-[360px] h-[521px] rounded-2xl overflow-hidden flex-shrink-0"
+                     style="background: linear-gradient(318deg, #8C8C8C -13.86%, #F6F6F6 27.33%); box-shadow: 0 4px 8px 0 rgba(0,0,0,0.10), 0 15px 15px 0 rgba(0,0,0,0.09), 0 35px 21px 0 rgba(0,0,0,0.05), 0 62px 25px 0 rgba(0,0,0,0.01), 0 97px 27px 0 rgba(0,0,0,0);">
+                    <img class="absolute top-[10px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] object-contain"
+                         src="../src/assets/img/customBlocks/CustomCardImg5.png"
+                         alt="Кастомный каталог">
+                    <div class="card-badges absolute left-[18px] top-[314px] flex gap-2 flex-wrap">
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full  bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white  font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Zero-block</span>
+                        <span class="inline-flex items-center justify-center px-3 py-1.5 rounded-full   bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white  font-montserrat text-[14px] italic font-medium tracking-[-0.28px] whitespace-nowrap">Синхронизация</span>
+                    </div>
+                    <h3 class="card-title absolute left-[20px] top-[363px] text-[#212529] font-semibold text-[24px] tracking-[-0.48px] leading-tight w-[280px]">
+                        Кастомный каталог товаров в Zero Block</h3>
+                    <a href="#"
+                       class="card-apply-btn absolute bottom-0 left-0 flex items-center justify-center px-[45px] py-[15px] text-white font-semibold text-[20px] tracking-[-0.4px]"
+                       style="background: linear-gradient(90deg, #00FFC3 0%, #00BBFF 100%); border-radius: 0 16px 0 0;">
+                        Применить +
+                    </a>
+                    <div class="opacity-75 absolute inset-0 flex items-center justify-center rounded-2xl"
+                         style="background: rgba(0, 208, 255, 0.15); backdrop-filter: blur(2px); opacity: 0.75;">
+                        <img src="../src/assets/img/icons/Lock.svg" alt="Lock.svg">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="w-full h-0 opacity-100 border border-[#A6A6A6]"></div>
+
+
+        <!-- Support / Donate section -->
+        <section class="px-6 mt-12">
+            <div class="border-[1.28px] border-[solid] border-[#d9d9d9] rounded-[8px] px-[37px] py-[25px] flex relative">
+                <div class="flex flex-col justify-between gap-8 items-start">
+                    <h2 class="font-semibold text-[32px] text-[#212529]">Поддержать проект</h2>
+                    <p class="font-normal text-[20px] text-[#222]">Если статья помогла — вы можете поблагодарить любой
+                        <br> суммой. Это мотивирует писать больше таких гайдов!</p>
+                    <form>
+                        <fieldset class="flex gap-[7px] font-normal text-[24px] text-[#000]">
+                            <legend class="sr-only">Выберите сумму поддержки</legend>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="100" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        100 ₽
+                      </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="300" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        300 ₽
+                      </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="500" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        500 ₽
+                      </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="custom" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        Своя сумма
+                      </span>
+                            </label>
+                        </fieldset>
+                    </form>
+                    <a class="rounded-[12px] px-[36px] py-[12px] font-medium text-[24px] text-[#fff] bg-black" href="#">Поблагодарить</a>
+                </div>
+                <div>
+                    <img class="absolute right-[-63px] h-[80%]" src="../src/assets/img/ill/heart.png" alt="heart">
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="py-[55px] bg-white">
+    <div class="mx-auto max-w-[1236px]">
+        <div class="flex justify-between w-full max-w-[1200px] mx-auto">
+            <section
+                    class="flex flex-col items-start gap-4 font-light text-[14px] px-[64px] border-r-[1px] border-[#D9D9D9]">
+                <img src="../src/assets/img/icons/versent.svg" alt="Versent">
+                <p class="text-black">© 2025 Versent. <br> Все права защищены.</p>
+                <p class="text-[#6C757D]">Icons by Icons8</p>
+            </section>
+            <section class="px-[64px] border-r-[1px] border-[#D9D9D9]">
+                <h2 class="font-medium text-[18px] text-[#222222] mb-4 pr-[54px]">Навигация</h2>
+                <nav>
+                    <ul class="text-[14px] text-black pl-[7px]">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Модификации</a></li>
+                        <li><a href="#">Документация</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="px-[64px] border-r-[1px] border-[#D9D9D9]">
+                <h2 class="font-medium text-[18px] text-[#222222] mb-4 pr-[54px]">Кастомные блоки</h2>
+                <ul class="text-[14px] text-black pl-[7px]">
+                    <li>Кастомный каталог</li>
+                    <li>Кастомные карточки</li>
+                    <li>Изменения корзины</li>
+                </ul>
+            </section>
+            <section class="px-[64px]">
+                <h2 class="font-medium text-[18px] text-[#222222] mb-4 pr-[54px]">Контакты</h2>
+                <address class="text-[14px] text-black not-italic pl-[7px]">
+                    <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                </address>
+            </section>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

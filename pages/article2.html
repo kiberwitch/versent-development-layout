@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/versent.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <title>Бегущая строка из логотипов компании в Tilda — Versent</title>
+    <meta name="description"
+          content="Логотипы компаний плавно движутся в бесконечной ленте. Идеально для того, чтобы показать, кто вам доверяет, не занимая полэкрана."/>
+    <link rel="stylesheet" href="/src/style.css"/>
+
+</head>
+<body class="font-[Montserrat,sans-serif] article-page-bg">
+
+<!-- ===== HEADER ===== -->
+<div class="mx-auto max-w-[1236px] px-4">
+    <header class="site-header">
+        <div class="flex justify-between items-center">
+            <a href="../index.html" class="flex gap-4 items-center">
+                <img src="../src/assets/img/icons/versent.svg" alt="versent-icon">
+                <img src="../src/assets/img/icons/Versent-icon.svg" alt="Versent">
+            </a>
+            <nav>
+                <ul class="flex gap-8 items-center font-light text-[#6C757D] text-base">
+                    <li><a href="#">Уроки</a></li>
+                    <li><a href="#">Код</a></li>
+                    <li><a href="#">Эффекты</a></li>
+                    <li><a href="#">Демо</a></li>
+                </ul>
+            </nav>
+            <div class="flex gap-8 items-center">
+                <form role="search" action="/search" method="get">
+                    <label class="relative block">
+                        <input type="search" placeholder="Поиск..."
+                               class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-light placeholder:text-[15px] text-[15px] pr-9">
+                        <img src="../src/assets/img/icons/search.svg" alt="search"
+                             class="absolute right-[10px] top-[2px] pointer-events-none">
+                    </label>
+                </form>
+                <button aria-label="Меню" class="flex flex-col gap-[6px] cursor-pointer bg-transparent border-none p-0">
+                    <span class="bg-black h-[1px] w-5 block rounded"></span>
+                    <span class="bg-black h-[1px] w-5 block rounded"></span>
+                    <span class="bg-black h-[1px] w-5 block rounded"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+</div>
+
+<!-- ===== MAIN ARTICLE ===== -->
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer mt-12">
+    <div class="mx-auto max-w-[1236px] px-4">
+        <div class="flex justify-between w-full footer-columns">
+            <section class="flex flex-col items-start gap-4 font-light text-sm px-16 border-r border-[#D9D9D9]">
+                <img src="../src/assets/img/icons/versent.svg" alt="Versent">
+                <p class="text-black">© 2025 Versent.<br>Все права защищены.</p>
+                <p class="text-[#6C757D]">Icons by Icons8</p>
+            </section>
+            <div class="footer-divider"></div>
+            <section class="px-16 border-r border-[#D9D9D9]">
+                <h2 class="font-medium text-lg text-[#222] mb-4">Навигация</h2>
+                <nav>
+                    <ul class="text-sm text-black space-y-1">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Модификации</a></li>
+                        <li><a href="#">Документация</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <div class="footer-divider"></div>
+            <section class="px-16 border-r border-[#D9D9D9]">
+                <h2 class="font-medium text-lg text-[#222] mb-4">Кастомные блоки</h2>
+                <ul class="text-sm text-black space-y-1">
+                    <li>Кастомный каталог</li>
+                    <li>Кастомные карточки</li>
+                    <li>Изменения корзины</li>
+                </ul>
+            </section>
+            <div class="footer-divider"></div>
+            <section class="px-16">
+                <h2 class="font-medium text-lg text-[#222] mb-4">Контакты</h2>
+                <address class="text-sm text-black not-italic">
+                    <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                </address>
+            </section>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Donation amount toggle
+    document.querySelectorAll('.donation-amount-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.donation-amount-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+</script>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

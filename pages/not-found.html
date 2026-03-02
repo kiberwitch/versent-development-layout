@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/src/style.css"/>
+    <title>Versent — Страница не найдена</title>
+</head>
+
+<body class="font-montserrat bg-not-found bg-no-repeat bg-cover bg-center min-h-screen">
+<div class="mx-auto max-w-[1236px]  ">
+
+    <header class="py-2 px-6 rounded-2xl shadow-navbar mt-[63px] bg-white">
+        <div class="flex justify-between items-center">
+            <a href="../pages/not-found.html" class="flex gap-4 items-center">
+                <img src="../src/assets/img/icons/versent.svg" alt="versent-icon">
+                <img src="../src/assets/img/icons/Versent-icon.svg" alt="versent">
+            </a>
+            <div>
+                <nav>
+                    <ul class="flex gap-8 items-center font-light text-[#6C757D] text-[16px]">
+                        <li><a href="#">Уроки</a></li>
+                        <li><a href="#">Код</a></li>
+                        <li><a href="#">Эффекты</a></li>
+                        <li><a href="#">Демо</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex justify-between gap-8 items-center">
+                <form role="search" action="/search" method="get" role="search">
+                    <label class="relative">
+                        <input type="search" placeholder="Поиск..."
+                               class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-montserrat placeholder:font-light placeholder:text-[15px] text-[15px] pr-[36px]">
+                        <img src="../src/assets/img/icons/search.svg" alt="search"
+                             class="absolute right-[10px] top-[2px] pointer-events-none">
+                    </label>
+                </form>
+                <div class="flex flex-col gap-[6px] cursor-pointer">
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative shadow-navbar bg-[#fafafa] mt-[63px] rounded-3xl   mb-16">
+
+        <section
+                class="mt-6 overflow-hidden rounded-3xl border border-slate-200/60 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.14)]">
+            <div
+                    class="grid grid-cols-2 min-h-[420px] content-center gap-10 px-8 py-14   md:items-center md:px-12">
+                <div class="grid gap-6   ">
+                    <h1 class="text-[32px] font-semibold text-slate-900">Страница не найдена</h1>
+                    <p class=" text-[16px] leading-snug text-slate-500">
+                        Возможно, страница была удалена или адрес введён неверно.
+                    </p>
+                    <a href="/index.html"
+                       class="inline-flex h-10 w-[210px] items-center justify-center rounded-lg px-6 text-sm font-semibold text-white shadow-[0_12px_22px_rgba(6,182,212,0.35)]"
+                       style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">
+                        На главную →
+                    </a>
+                </div>
+
+                <div class="flex justify-center  ">
+                    <img src="../src/assets/img/notFound/not-found-img.svg" alt="" aria-hidden="true"
+                           loading="lazy"/>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+<!--    <div class="fixed inset-0 z-[60] hidden" data-pro-modal>-->
+<!--        <div class="absolute inset-0 bg-black/60" data-pro-modal-close></div>-->
+<!--        <div-->
+<!--                class="relative mx-auto mt-20 w-[720px] max-w-[calc(100vw-32px)] overflow-hidden rounded-3xl bg-white shadow-[0_28px_90px_rgba(15,23,42,0.35)]">-->
+<!--            <div class="grid gap-6 p-8 md:grid-cols-[1fr_220px] md:items-center">-->
+<!--                <div>-->
+<!--                    <p class="text-lg font-semibold text-slate-900">Оплати подписку,</p>-->
+<!--                    <p class="text-lg font-semibold text-slate-900">чтобы получить доступ</p>-->
+<!--                    <a href="/tariffs-modal-standalone.html"-->
+<!--                       class="mt-6 inline-flex items-center justify-center rounded-xl px-8 py-3 text-sm font-bold text-white"-->
+<!--                       style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);">-->
+<!--                        К выбору тарифа +-->
+<!--                    </a>-->
+<!--                </div>-->
+
+<!--                <img src="/Gemini_Generated_Image_wg0ql0wg0ql0wg0q%201.png" alt="" aria-hidden="true"-->
+<!--                     class="mx-auto h-auto w-full max-w-[220px]" loading="lazy"/>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <script type="module">-->
+<!--        const menuToggle = document.querySelector('[data-header-menu-toggle]')-->
+<!--        const menuPanel = document.querySelector('[data-header-menu-panel]')-->
+<!--        const menuBackdrop = document.querySelector('[data-header-menu-backdrop]')-->
+
+<!--        const positionMenuPanel = () => {-->
+<!--            if (!menuToggle || !menuPanel) return-->
+
+<!--            const rect = menuToggle.getBoundingClientRect()-->
+<!--            const panelWidth = menuPanel.offsetWidth || 360-->
+<!--            const gap = 10-->
+<!--            const top = rect.bottom + gap-->
+
+<!--            const minLeft = 16-->
+<!--            const maxLeft = Math.max(minLeft, window.innerWidth - panelWidth - 16)-->
+<!--            const preferredLeft = rect.right - panelWidth-->
+<!--            const left = Math.min(Math.max(preferredLeft, minLeft), maxLeft)-->
+
+<!--            menuPanel.style.top = `${top}px`-->
+<!--            menuPanel.style.left = `${left}px`-->
+<!--        }-->
+
+<!--        const openMenu = () => {-->
+<!--            if (!menuPanel || !menuBackdrop) return-->
+<!--            positionMenuPanel()-->
+<!--            menuPanel.classList.remove('hidden')-->
+<!--            menuBackdrop.classList.remove('hidden')-->
+<!--        }-->
+
+<!--        const closeMenu = () => {-->
+<!--            if (!menuPanel || !menuBackdrop) return-->
+<!--            menuPanel.classList.add('hidden')-->
+<!--            menuBackdrop.classList.add('hidden')-->
+<!--        }-->
+
+<!--        if (menuToggle) {-->
+<!--            menuToggle.addEventListener('click', () => {-->
+<!--                if (!menuPanel || !menuBackdrop) return-->
+<!--                const isOpen = menuBackdrop && !menuBackdrop.classList.contains('hidden')-->
+<!--                if (isOpen) closeMenu()-->
+<!--                else openMenu()-->
+<!--            })-->
+<!--        }-->
+
+<!--        window.addEventListener('resize', () => {-->
+<!--            if (!menuBackdrop || menuBackdrop.classList.contains('hidden')) return-->
+<!--            positionMenuPanel()-->
+<!--        })-->
+
+<!--        if (menuBackdrop) {-->
+<!--            menuBackdrop.addEventListener('click', () => closeMenu())-->
+<!--        }-->
+
+<!--        document.addEventListener('keydown', (e) => {-->
+<!--            if (e.key === 'Escape') {-->
+<!--                closeMenu()-->
+<!--                const modal = document.querySelector('[data-pro-modal]')-->
+<!--                if (modal && !modal.classList.contains('hidden')) modal.classList.add('hidden')-->
+<!--            }-->
+<!--        })-->
+
+<!--        const tabBtns = document.querySelectorAll('[data-menu-tab-btn]')-->
+<!--        const tabPanels = document.querySelectorAll('[data-menu-tab]')-->
+<!--        const tabUnderline = document.querySelector('[data-menu-tab-underline]')-->
+
+<!--        const positionTabUnderline = (btn) => {-->
+<!--            if (!tabUnderline || !btn) return-->
+<!--            const parent = tabUnderline.parentElement-->
+<!--            if (!parent) return-->
+
+<!--            const parentRect = parent.getBoundingClientRect()-->
+<!--            const label = btn.querySelector('[data-menu-tab-label]')-->
+<!--            const targetRect = (label || btn).getBoundingClientRect()-->
+
+<!--            const width = targetRect.width-->
+<!--            const left = targetRect.left - parentRect.left-->
+<!--            const maxLeft = Math.max(0, parentRect.width - width)-->
+<!--            const clampedLeft = Math.min(Math.max(left, 0), maxLeft)-->
+
+<!--            tabUnderline.style.width = `${width}px`-->
+<!--            tabUnderline.style.transform = `translateX(${clampedLeft}px)`-->
+<!--        }-->
+
+<!--        const setActiveTabBtn = (activeBtn) => {-->
+<!--            tabBtns.forEach((b) => {-->
+<!--                b.classList.remove('opacity-100', 'font-bold')-->
+<!--                b.classList.add('opacity-70', 'font-semibold')-->
+<!--            })-->
+
+<!--            if (activeBtn) {-->
+<!--                activeBtn.classList.remove('opacity-70', 'font-semibold')-->
+<!--                activeBtn.classList.add('opacity-100', 'font-bold')-->
+<!--                positionTabUnderline(activeBtn)-->
+<!--                tabUnderline.classList.remove('opacity-0')-->
+<!--                tabUnderline.classList.add('opacity-100')-->
+<!--            }-->
+<!--        }-->
+
+<!--        tabBtns.forEach((btn) => {-->
+<!--            btn.addEventListener('click', () => {-->
+<!--                const tab = btn.getAttribute('data-menu-tab-btn')-->
+<!--                if (!tab) return-->
+
+<!--                setActiveTabBtn(btn)-->
+<!--                tabPanels.forEach((panel) => {-->
+<!--                    if (panel.getAttribute('data-menu-tab') === tab) panel.classList.remove('hidden')-->
+<!--                    else panel.classList.add('hidden')-->
+<!--                })-->
+<!--            })-->
+<!--        })-->
+
+<!--        const initialActiveBtn = document.querySelector('[data-menu-tab-btn="mods"]')-->
+<!--        if (initialActiveBtn) setActiveTabBtn(initialActiveBtn)-->
+
+<!--        window.addEventListener('resize', () => {-->
+<!--            if (!menuBackdrop || menuBackdrop.classList.contains('hidden')) return-->
+<!--            const currentTab = document.querySelector('[data-menu-tab-btn].font-bold')-->
+<!--            if (currentTab) positionTabUnderline(currentTab)-->
+<!--        })-->
+
+<!--        const proModal = document.querySelector('[data-pro-modal]')-->
+<!--        const openProBtns = document.querySelectorAll('[data-open-pro-modal]')-->
+<!--        const closeProBtns = document.querySelectorAll('[data-pro-modal-close]')-->
+
+<!--        openProBtns.forEach((btn) => {-->
+<!--            btn.addEventListener('click', () => {-->
+<!--                if (!proModal) return-->
+<!--                closeMenu()-->
+<!--                proModal.classList.remove('hidden')-->
+<!--            })-->
+<!--        })-->
+
+<!--        closeProBtns.forEach((btn) => {-->
+<!--            btn.addEventListener('click', () => {-->
+<!--                if (!proModal) return-->
+<!--                proModal.classList.add('hidden')-->
+<!--            })-->
+<!--        })-->
+<!--    </script>-->
+</div>
+</body>
+
+</html>
