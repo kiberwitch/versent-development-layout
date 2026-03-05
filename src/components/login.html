@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/versent.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <title>Регистрация — Versent</title>
+    <meta name="description" content="Регистрация на сайте Versent"/>
+    <meta http-equiv="Content-Language" content="ru"/>
+
+</head>
+<body class="font-montserrat h-screen "
+>
+
+
+<div class="relative z-10">
+
+
+    <!-- Main content -->
+    <main class="mx-auto max-w-[517px] mt-[63px]  py-12  border rounded-[16px]">
+
+        <!-- Registration login-register -->
+        <div class="flex flex-col justify-center items-center gap-3 flex-1  ">
+            <h1 class="font-montserrat text-2xl font-semibold text-[#212529] text-center m-0">Вход</h1>
+
+            <form class="flex flex-col gap-4  justify-center   w-4/5" action="#" method="post" novalidate>
+                <input class="w-full border border-[#B9B9B9] rounded-[4px] px-4 py-3.5 font-montserrat text-sm font-normal text-[#212529] bg-[#F8F9FA] placeholder:text-[#6C757D] focus:outline-none focus:border-[#00BBFF] transition-colors duration-150 box-border" type="text" name="username" placeholder="Email / Логин" autocomplete="username" required>
+                <input class="w-full border border-[#B9B9B9] rounded-[4px] px-4 py-3.5 font-montserrat text-sm font-normal text-[#212529] bg-[#F8F9FA] placeholder:text-[#6C757D] focus:outline-none focus:border-[#00BBFF] transition-colors duration-150 box-border" type="password" name="password" placeholder="Пароль" autocomplete="new-password" required>
+                <p class="font-normal text-sm leading-[100%] tracking-[0%] text-[#515151] text-end">Забыли пароль?</p>
+
+                <button type="submit" class="bg-[#AEAEAE] text-white font-montserrat text-base font-medium rounded-[8px] px-12 py-3 cursor-pointer transition-colors duration-150 block w-max mx-auto hover:bg-[#6c6c6c]  ">Далее</button>
+
+            </form>
+        </div>
+        <!-- Social icons -->
+        <div class="flex justify-center gap-3 mt-4">
+            <a href="#" class="w-9 h-9 rounded-[10px] flex items-center justify-center overflow-hidden shrink-0 bg-[#1976D2]" aria-label="ВКонтакте">
+                <img src="../assets/img/login-register/VK.png" alt="VK">
+            </a>
+            <a href="#" class="w-9 h-9 rounded-[10px] flex items-center justify-center overflow-hidden shrink-0 bg-[#29B6F6]" aria-label="Telegram">
+                <img src="../assets/img/login-register/Telegram.png" alt="VK">
+            </a>
+            <a href="#" class="w-9 h-9 rounded-[10px] flex items-center justify-center overflow-hidden shrink-0 bg-[#FF3D00]" aria-label="YouTube">
+                <img src="../assets/img/login-register/YouTube.png" alt="VK">
+            </a>
+        </div>
+
+        <p class="font-normal text-center mt-6 text-sm leading-[100%] tracking-[0%] text-[#515151]">Нажимая «Далее», вы соглашаетесь с правилами сервиса</p>
+        <p class="font-normal  text-center mt-6 text-sm leading-[100%] tracking-[0%] text-[#515151]">Возникли прпоблемы? <span class="underline">Напишите нам!</span></p>
+
+
+    </main>
+</div>
+
+<script type="module" src="../main.js"></script>
+</body>
+</html>

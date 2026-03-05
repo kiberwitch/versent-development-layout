@@ -25,9 +25,9 @@
       style="background: image-set(url(src/assets/img/bg/BG.webp) 1x, url(src/assets/img/bg/BG.png) 1x), linear-gradient(180deg, #e0fffc 0%, #f5fffe 2.88%); background-repeat: no-repeat; background-position: top; background-size: cover;"
 >
 <div class="mx-auto max-w-[1236px]  ">
-    <header class="py-2 px-6 rounded-2xl shadow-navbar mt-[63px] bg-white">
-        <div class="flex justify-between items-center">
-            <a href="./pages/not-found.html" class="flex gap-4 items-center">
+    <header class="py-2 px-6 rounded-2xl shadow-navbar mt-[63px] bg-white ">
+        <div class="flex justify-between items-center relative ">
+            <a href="index.html" class="flex gap-4 items-center">
                 <img src="src/assets/img/icons/versent.svg" alt="versent-icon">
                 <img src="src/assets/img/icons/Versent-icon.svg" alt="versent">
             </a>
@@ -50,13 +50,108 @@
                              class="absolute right-[10px] top-[2px] pointer-events-none">
                     </label>
                 </form>
-                <div class="flex flex-col gap-[6px] cursor-pointer">
+                <button type="button" aria-label="Открыть меню" class="flex flex-col gap-[6px] cursor-pointer" data-header-menu-toggle>
                     <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
                     <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
                     <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                </button>
+            </div>
+
+            <div class="absolute top-12 right-0 z-50 hidden w-[360px] max-w-[calc(100vw-32px)]" data-header-menu-panel>
+                <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]">
+                    <div class="flex items-center justify-between gap-4 px-4 pt-4  ">
+                        <a href="./pages/not-found.html" class="flex gap-4 items-center">
+                            <img class="w-[26px]" src="src/assets/img/icons/versent.svg" alt="versent-icon">
+                            <img   src="src/assets/img/icons/Versent-icon.svg" alt="versent">
+                        </a>
+                        <div class="flex justify-end gap-3 ">
+                            <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#1976D2]" aria-label="ВКонтакте">
+                                <img src="src/assets/img/login-register/VK.png" alt="VK">
+                            </a>
+                            <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#29B6F6]" aria-label="Telegram">
+                                <img src="src/assets/img/login-register/Telegram.png" alt="VK">
+                            </a>
+                            <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#FF3D00]" aria-label="YouTube">
+                                <img src="src/assets/img/login-register/YouTube.png" alt="VK">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 px-4 " >
+                        <div class="relative grid grid-cols-2 overflow-hidden rounded-xl p-1 text-sm font-semibold bg-gradient-to-r from-[#00FFC4] to-[#00BBFF]" style="  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                            <button type="button" class="rounded-lg px-3 py-2 text-white underline" data-menu-tab-btn="mods"><span data-menu-tab-label>Модификации</span></button>
+                            <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="settings"><span data-menu-tab-label>Настройки</span></button>
+                            <div aria-hidden="true" class="pointer-events-none absolute bottom-2 left-0 h-[2px] w-0 opacity-0" style="background: #fff;" data-menu-tab-underline></div>
+                        </div>
+                    </div>
+
+                    <div class="px-4 pb-4 pt-4">
+                        <div data-menu-tab="mods">
+                            <div class="rounded-[8px] bg-slate-50 p-3 text-[14px] text-slate-600 " style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                                <p>Имя пользователя: <span class="text-black">Ник</span></p>
+                                <p class="mt-1">Почта: <sapn class="text-black">Почта</sapn></p>
+                            </div>
+
+                            <button
+                                    type="button"
+                                    class="mt-4 inline-flex h-9 w-full items-center justify-center rounded-xl text-sm font-bold text-white"
+                                    data-open-pro-modal
+                                    style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);"
+                            >
+                                Улучшить до Pro+
+                            </button>
+
+                            <div class="mt-4 grid grid-cols-2 gap-3">
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 1</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 2</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 3</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 4</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 5</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Создать шаблон</div>
+                            </div>
+
+                            <p class="mt-4 text-[10px] text-[#000]">Нашли ошибку или хотите что-то предложить? Напишите нам</p>
+                        </div>
+
+                        <div class="hidden" data-menu-tab="settings">
+                            <p class="text-[16px] font-semibold text-slate-700">Общие</p>
+                            <div class="mt-2 grid gap-2 text-[16px] text-slate-600">
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> id блоков</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> возможность добавлять комментарии к блокам</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> reset блоков</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> тёмная тема для этого блока</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> линии для этого блока</label>
+                            </div>
+
+                            <p class="mt-4 text-[11px] font-semibold text-slate-700">Меню редактора (Справа)</p>
+                            <div class="mt-2 grid gap-2 text-[14px] text-slate-600">
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Показать кнопки быстрой публикации</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть предпросмотр</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть опубликованное</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть настройки</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть помощь</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть ещё</label>
+                            </div>
+
+                            <div class="flex">
+                                <button type="button" class="mt-4 ml-auto rounded-[6px] bg-slate-500 px-4 py-2 text-[14px] font-semibold text-white hover:bg-slate-600">
+                                    Применить
+                                </button>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between gap-3">
+                                <p class="text-[13px] text-slate-500">Оплати подписку, чтобы получить доступ</p>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="fixed inset-0 z-40 hidden bg-black/40" data-header-menu-backdrop></div>
         </div>
+
+
+
     </header>
     <main class="shadow-navbar bg-[#fafafa] rounded-3xl pb-6 mb-16">
         <section
@@ -112,7 +207,7 @@
                         <p class="font-medium text-[16px] text-[#222222]">Полный контроль над стилем, фильтрами и
                             пагинацией.<br> Синхронизация с Tilda Store.</p>
                     </div>
-                    <a href="#"
+                    <a href="pages/custom-blocks.html"
                        class="bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)] rounded-tr-[16px] rounded-bl-[16px] px-[45px] py-[15px] text-white font-semibold text-[20px] absolute bottom-0 left-0">Смотреть
                         демо <img class="inline" src="src/assets/img/icons/white-arrow.svg" alt="arrow"></a>
                 </div>
@@ -136,7 +231,7 @@
                             Tilda.</p>
                     </div>
                     <a class="bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)] rounded-tr-[16px] rounded-bl-[16px] px-[45px] py-[15px] text-white font-semibold text-[20px] absolute bottom-0 left-0"
-                       href="#">Попробовать <img class="inline" src="src/assets/img/icons/white-arrow.svg" alt="arrow"></a>
+                       href="pages/element-animation.html">Попробовать <img class="inline" src="src/assets/img/icons/white-arrow.svg" alt="arrow"></a>
                 </div>
             </div>
         </section>
@@ -203,6 +298,10 @@
         </section>
     </main>
 </div>
+
+
+
+
 <footer class="py-[55px] bg-white">
     <div class="mx-auto max-w-[1236px]">
         <div class="flex justify-between w-full max-w-[1200px] mx-auto">
@@ -243,6 +342,32 @@
         </div>
     </div>
 </footer>
+
+
+<!-- cookie card-->
+
+<div class="fixed bottom-6 left-6 z-[80] w-[520px] max-w-[calc(100vw-48px)] overflow-hidden rounded-2xl bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]" data-cookie-popup>
+    <div class="grid gap-4 p-[16px]   sm:grid-cols-[1fr_120px] sm:items-center">
+        <div class="grid gap-1">
+            <p class="font-[Inter] font-normal text-[16px] leading-[140%] tracking-[0%]">
+                Мы используем файлы <span class="font-normal text-[#01C3F8] text-base leading-none tracking-normal">cookie</span>,
+                чтобы сайт работал лучше.
+                Продолжая, вы соглашаетесь с этим.
+
+            </p>
+
+        </div>
+
+        <img src="src/assets/img/icons/Cookie.png" alt="" aria-hidden="true" class="mx-auto h-auto w-full w-[76px]" loading="lazy" />
+    </div>
+
+    <button type="button" class="inline-flex h-12 w-full items-center justify-center text-base font-semibold text-white" style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%);" data-cookie-accept>
+        Принять
+    </button>
+</div>
+
+
 <script type="module" src="/src/main.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/versent.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <title>Регистрация — Versent</title>
+    <meta name="description" content="Регистрация на сайте Versent"/>
+    <meta http-equiv="Content-Language" content="ru"/>
+
+</head>
+<body class="font-montserrat h-screen "
+      style="background: image-set(url(../src/assets/img/bg/bg-login.png) 1x, url(../src/assets/img/bg/bg-login.png) 1x), linear-gradient(180deg, #e0fffc 0%, #f5fffe 2.88%); background-repeat: no-repeat; background-position: top; background-size: cover;"
+>
+
+<div class="relative z-10">
+    <!-- Header -->
+    <div class="mx-auto max-w-[1236px]">
+        <header class="py-2 px-6 rounded-2xl shadow-navbar mt-[63px] bg-white ">
+            <div class="flex justify-between items-center relative ">
+                <a href="../index.html" class="flex gap-4 items-center">
+                    <img src="../src/assets/img/icons/versent.svg" alt="versent-icon">
+                    <img src="../src/assets/img/icons/Versent-icon.svg" alt="versent">
+                </a>
+                <div>
+                    <nav>
+                        <ul class="flex gap-8 items-center font-light text-[#6C757D] text-[16px]">
+                            <li><a href="#">Уроки</a></li>
+                            <li><a href="#">Код</a></li>
+                            <li><a href="#">Эффекты</a></li>
+                            <li><a href="#">Демо</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex justify-between gap-8 items-center">
+                    <form role="search" action="/search" method="get" role="search">
+                        <label class="relative">
+                            <input type="search" placeholder="Поиск..."
+                                   class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-montserrat placeholder:font-light placeholder:text-[15px] text-[15px] pr-[36px]">
+                            <img src="../src/assets/img/icons/search.svg" alt="search"
+                                 class="absolute right-[10px] top-[2px] pointer-events-none">
+                        </label>
+                    </form>
+                    <button type="button" aria-label="Открыть меню" class="flex flex-col gap-[6px] cursor-pointer" data-header-menu-toggle>
+                        <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                        <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                        <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                    </button>
+                </div>
+
+                <div class="absolute top-12 right-0 z-50 hidden w-[360px] max-w-[calc(100vw-32px)]" data-header-menu-panel>
+                    <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]">
+                        <div class="flex items-center justify-between gap-4 px-4 pt-4  ">
+                            <a href="../index.html" class="flex gap-4 items-center">
+                                <img class="w-[26px]" src="../src/assets/img/icons/versent.svg" alt="versent-icon">
+                                <img src="../src/assets/img/icons/Versent-icon.svg" alt="versent">
+                            </a>
+                            <div class="flex justify-end gap-3 ">
+                                <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#1976D2]" aria-label="ВКонтакте">
+                                    <img src="../src/assets/img/login-register/VK.png" alt="VK">
+                                </a>
+                                <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#29B6F6]" aria-label="Telegram">
+                                    <img src="../src/assets/img/login-register/Telegram.png" alt="VK">
+                                </a>
+                                <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#FF3D00]" aria-label="YouTube">
+                                    <img src="../src/assets/img/login-register/YouTube.png" alt="VK">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 px-4 " >
+                            <div class="relative grid grid-cols-2 overflow-hidden rounded-xl p-1 text-sm font-semibold bg-gradient-to-r from-[#00FFC4] to-[#00BBFF]" style="  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                                <button type="button" class="rounded-lg px-3 py-2 text-white underline" data-menu-tab-btn="mods"><span data-menu-tab-label>Модификации</span></button>
+                                <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="settings"><span data-menu-tab-label>Настройки</span></button>
+                                <div aria-hidden="true" class="pointer-events-none absolute bottom-2 left-0 h-[2px] w-0 opacity-0" style="background: #fff;" data-menu-tab-underline></div>
+                            </div>
+                        </div>
+
+                        <div class="px-4 pb-4 pt-4">
+                            <div data-menu-tab="mods">
+                                <div class="rounded-[8px] bg-slate-50 p-3 text-[14px] text-slate-600 " style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                                    <p>Имя пользователя: <span class="text-black">Ник</span></p>
+                                    <p class="mt-1">Почта: <sapn class="text-black">Почта</sapn></p>
+                                </div>
+
+                                <button
+                                        type="button"
+                                        class="mt-4 inline-flex h-9 w-full items-center justify-center rounded-xl text-sm font-bold text-white"
+                                        data-open-pro-modal
+                                        style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);"
+                                >
+                                    Улучшить до Pro+
+                                </button>
+
+                                <div class="mt-4 grid grid-cols-2 gap-3">
+                                    <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 1</div>
+                                    <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 2</div>
+                                    <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 3</div>
+                                    <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 4</div>
+                                    <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 5</div>
+                                    <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Создать шаблон</div>
+                                </div>
+
+                                <p class="mt-4 text-[10px] text-[#000]">Нашли ошибку или хотите что-то предложить? Напишите нам</p>
+                            </div>
+
+                            <div class="hidden" data-menu-tab="settings">
+                                <p class="text-[16px] font-semibold text-slate-700">Общие</p>
+                                <div class="mt-2 grid gap-2 text-[16px] text-slate-600">
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> id блоков</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> возможность добавлять комментарии к блокам</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> reset блоков</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> тёмная тема для этого блока</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> линии для этого блока</label>
+                                </div>
+
+                                <p class="mt-4 text-[11px] font-semibold text-slate-700">Меню редактора (Справа)</p>
+                                <div class="mt-2 grid gap-2 text-[14px] text-slate-600">
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Показать кнопки быстрой публикации</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть предпросмотр</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть опубликованное</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть настройки</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть помощь</label>
+                                    <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть ещё</label>
+                                </div>
+
+                                <div class="flex">
+                                    <button type="button" class="mt-4 ml-auto rounded-[6px] bg-slate-500 px-4 py-2 text-[14px] font-semibold text-white hover:bg-slate-600">
+                                        Применить
+                                    </button>
+                                </div>
+                                <div class="mt-4 flex items-center justify-between gap-3">
+                                    <p class="text-[13px] text-slate-500">Оплати подписку, чтобы получить доступ</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixed inset-0 z-40 hidden bg-black/40" data-header-menu-backdrop></div>
+            </div>
+
+
+
+        </header>
+    </div>
+
+    <!-- Main content -->
+    <main class="mx-auto max-w-[1236px]  mt-[63px] ">
+        <div class="bg-white rounded-[16px] p-8 shadow-[0_15px_34px_0_rgba(0,0,0,0.05),0_62px_62px_0_rgba(0,0,0,0.04),0_140px_84px_0_rgba(0,0,0,0.03),0_250px_100px_0_rgba(0,0,0,0.01),0_391px_109px_0_rgba(0,0,0,0)]">
+
+            <!-- Breadcrumb + back link row -->
+            <div class="flex justify-between items-center mb-8">
+                <p class="text-[#898989] font-montserrat text-sm font-normal underline">
+                    <a href="../index.html" class="text-[#898989] font-montserrat text-sm font-normal underline">Главная</a><span class="no-underline"> →</span>
+                    <span class="text-black  no-underline"> Вход</span>
+                </p>
+                <a href="../index.html" class="text-[#212529] font-montserrat text-sm font-normal no-underline whitespace-nowrap hover:underline">← Вернуться на главную</a>
+            </div>
+
+            <!-- Card body: illustration + login-register -->
+            <div class="flex gap-8 items-center ">
+
+                <!-- Illustration -->
+                <div class="flex items-center justify-center flex-1 min-h-[260px]">
+                    <img src="../src/assets/img/login-register/form-img-2.png" alt="form-img">
+                </div>
+
+                <!-- Registration login-register -->
+                <div class="flex flex-col justify-center items-center gap-3 flex-1  ">
+                    <h1 class="font-montserrat text-2xl font-semibold text-[#212529] text-center m-0">Вход</h1>
+
+                    <form class="flex flex-col gap-4  justify-center   w-4/5" action="#" method="post" novalidate>
+                        <input class="w-full border border-[#B9B9B9] rounded-[4px] px-4 py-3.5 font-montserrat text-sm font-normal text-[#212529] bg-[#F8F9FA] placeholder:text-[#6C757D] focus:outline-none focus:border-[#00BBFF] transition-colors duration-150 box-border" type="text" name="username" placeholder="Email / Логин" autocomplete="username" required>
+                        <input class="w-full border border-[#B9B9B9] rounded-[4px] px-4 py-3.5 font-montserrat text-sm font-normal text-[#212529] bg-[#F8F9FA] placeholder:text-[#6C757D] focus:outline-none focus:border-[#00BBFF] transition-colors duration-150 box-border" type="password" name="password" placeholder="Пароль" autocomplete="new-password" required>
+                        <p class="font-normal text-sm leading-[100%] tracking-[0%] text-[#515151] text-end">Забыли пароль?</p>
+
+                        <button type="submit" class="bg-[#AEAEAE] text-white font-montserrat text-base font-medium rounded-[8px] px-12 py-3 cursor-pointer transition-colors duration-150 block w-max mx-auto hover:bg-[#6c6c6c]  ">Далее</button>
+
+                        <p class="font-normal text-sm leading-[100%] tracking-[0%] text-[#515151]">Нажимая «Далее», вы соглашаетесь с правилами сервиса</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Help text -->
+            <div class="mt-8">
+                <p class="  text-sm font-normal text-[#212529] m-0">
+                    Возникли проблемы? <a href="mailto:hello@gmail.com" class="text-[#00BBFF] no-underline">Напишите нам!</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Social icons -->
+        <div class="flex justify-end gap-3 mt-4">
+            <a href="#" class="w-9 h-9 rounded-[10px] flex items-center justify-center overflow-hidden shrink-0 bg-[#1976D2]" aria-label="ВКонтакте">
+                <img src="../src/assets/img/login-register/VK.png" alt="VK">
+            </a>
+            <a href="#" class="w-9 h-9 rounded-[10px] flex items-center justify-center overflow-hidden shrink-0 bg-[#29B6F6]" aria-label="Telegram">
+                <img src="../src/assets/img/login-register/Telegram.png" alt="VK">
+            </a>
+            <a href="#" class="w-9 h-9 rounded-[10px] flex items-center justify-center overflow-hidden shrink-0 bg-[#FF3D00]" aria-label="YouTube">
+                <img src="../src/assets/img/login-register/YouTube.png" alt="VK">
+            </a>
+        </div>
+    </main>
+</div>
+
+<script type="module" src="../src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/versent.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <title>Как добавить любой слайдер на Тильду — Versent</title>
+    <meta name="description"
+          content="Полное руководство: как добавить любой слайдер на Тильду с помощью браузерного расширения"/>
+    <meta http-equiv="Content-Language" content="ru"/>
+    <meta name="robots" content="index, follow"/>
+
+</head>
+<body class="font-montserrat"
+      style="background: image-set(url(../src/assets/img/bg/BG.webp) 1x, url(../src/assets/img/bg/BG.png) 1x), linear-gradient(180deg, #e0fffc 0%, #f5fffe 2.88%); background-repeat: no-repeat; background-position: top; background-size: cover;"
+>
+
+<div class="mx-auto max-w-[1236px]  ">
+    <!-- Header -->
+    <header class="py-2 px-6 rounded-2xl shadow-navbar mt-[63px] bg-white ">
+        <div class="flex justify-between items-center relative ">
+            <a href="../index.html" class="flex gap-4 items-center">
+                <img src="../src/assets/img/icons/versent.svg" alt="versent-icon">
+                <img src="../src/assets/img/icons/Versent-icon.svg" alt="versent">
+            </a>
+            <div>
+                <nav>
+                    <ul class="flex gap-8 items-center font-light text-[#6C757D] text-[16px]">
+                        <li><a href="#">Уроки</a></li>
+                        <li><a href="#">Код</a></li>
+                        <li><a href="#">Эффекты</a></li>
+                        <li><a href="#">Демо</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex justify-between gap-8 items-center">
+                <form role="search" action="/search" method="get" role="search">
+                    <label class="relative">
+                        <input type="search" placeholder="Поиск..."
+                               class="w-[260px] h-[27px] border-black/20 border-t border-b px-[10px] placeholder:font-montserrat placeholder:font-light placeholder:text-[15px] text-[15px] pr-[36px]">
+                        <img src="../src/assets/img/icons/search.svg" alt="search"
+                             class="absolute right-[10px] top-[2px] pointer-events-none">
+                    </label>
+                </form>
+                <button type="button" aria-label="Открыть меню" class="flex flex-col gap-[6px] cursor-pointer" data-header-menu-toggle>
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                    <div class="bg-black h-[1px] w-5 rounded-[1px]"></div>
+                </button>
+            </div>
+
+            <div class="absolute top-12 right-0 z-50 hidden w-[360px] max-w-[calc(100vw-32px)]" data-header-menu-panel>
+                <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.22)]">
+                    <div class="flex items-center justify-between gap-4 px-4 pt-4  ">
+                        <a href="../index.html" class="flex gap-4 items-center">
+                            <img class="w-[26px]" src="../src/assets/img/icons/versent.svg" alt="versent-icon">
+                            <img src="../src/assets/img/icons/Versent-icon.svg" alt="versent">
+                        </a>
+                        <div class="flex justify-end gap-3 ">
+                            <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#1976D2]" aria-label="ВКонтакте">
+                                <img src="../src/assets/img/login-register/VK.png" alt="VK">
+                            </a>
+                            <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#29B6F6]" aria-label="Telegram">
+                                <img src="../src/assets/img/login-register/Telegram.png" alt="VK">
+                            </a>
+                            <a href="#" class="h-[27px] w-[27px] rounded-[5px] flex items-center justify-center overflow-hidden shrink-0 bg-[#FF3D00]" aria-label="YouTube">
+                                <img src="../src/assets/img/login-register/YouTube.png" alt="VK">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 px-4 " >
+                        <div class="relative grid grid-cols-2 overflow-hidden rounded-xl p-1 text-sm font-semibold bg-gradient-to-r from-[#00FFC4] to-[#00BBFF]" style="  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                            <button type="button" class="rounded-lg px-3 py-2 text-white underline" data-menu-tab-btn="mods"><span data-menu-tab-label>Модификации</span></button>
+                            <button type="button" class="rounded-lg px-3 py-2 text-white" data-menu-tab-btn="settings"><span data-menu-tab-label>Настройки</span></button>
+                            <div aria-hidden="true" class="pointer-events-none absolute bottom-2 left-0 h-[2px] w-0 opacity-0" style="background: #fff;" data-menu-tab-underline></div>
+                        </div>
+                    </div>
+
+                    <div class="px-4 pb-4 pt-4">
+                        <div data-menu-tab="mods">
+                            <div class="rounded-[8px] bg-slate-50 p-3 text-[14px] text-slate-600 " style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);">
+                                <p>Имя пользователя: <span class="text-black">Ник</span></p>
+                                <p class="mt-1">Почта: <sapn class="text-black">Почта</sapn></p>
+                            </div>
+
+                            <button
+                                    type="button"
+                                    class="mt-4 inline-flex h-9 w-full items-center justify-center rounded-xl text-sm font-bold text-white"
+                                    data-open-pro-modal
+                                    style="background: linear-gradient(90deg, #00ffc3 0%, #0bf 100%); box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.09), 0 17px 10px 0 rgba(0, 0, 0, 0.05), 0 31px 12px 0 rgba(0, 0, 0, 0.01), 0 48px 13px 0 rgba(0, 0, 0, 0);"
+                            >
+                                Улучшить до Pro+
+                            </button>
+
+                            <div class="mt-4 grid grid-cols-2 gap-3">
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 1</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 2</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 3</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 4</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Скрипт 5</div>
+                                <div class=" shadow-lg grid h-[150px] place-items-center rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-400">Создать шаблон</div>
+                            </div>
+
+                            <p class="mt-4 text-[10px] text-[#000]">Нашли ошибку или хотите что-то предложить? Напишите нам</p>
+                        </div>
+
+                        <div class="hidden" data-menu-tab="settings">
+                            <p class="text-[16px] font-semibold text-slate-700">Общие</p>
+                            <div class="mt-2 grid gap-2 text-[16px] text-slate-600">
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> id блоков</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> возможность добавлять комментарии к блокам</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> reset блоков</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> тёмная тема для этого блока</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> линии для этого блока</label>
+                            </div>
+
+                            <p class="mt-4 text-[11px] font-semibold text-slate-700">Меню редактора (Справа)</p>
+                            <div class="mt-2 grid gap-2 text-[14px] text-slate-600">
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Показать кнопки быстрой публикации</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть предпросмотр</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть опубликованное</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть настройки</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть помощь</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="h-3.5 w-3.5 rounded border border-slate-300" /> Скрыть ещё</label>
+                            </div>
+
+                            <div class="flex">
+                                <button type="button" class="mt-4 ml-auto rounded-[6px] bg-slate-500 px-4 py-2 text-[14px] font-semibold text-white hover:bg-slate-600">
+                                    Применить
+                                </button>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between gap-3">
+                                <p class="text-[13px] text-slate-500">Оплати подписку, чтобы получить доступ</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed inset-0 z-40 hidden bg-black/40" data-header-menu-backdrop></div>
+        </div>
+
+
+
+    </header>
+    <!-- Article card -->
+    <main class="mt-[63px] mb-16 rounded-3xl bg-[#FAFAFA] shadow-[0_196px_55px_0_rgba(0,0,0,0.00),0_126px_50px_0_rgba(0,0,0,0.01),0_71px_42px_0_rgba(0,0,0,0.03),0_31px_31px_0_rgba(0,0,0,0.04),0_8px_17px_0_rgba(0,0,0,0.05)] overflow-hidden">
+
+        <!-- Article header section -->
+        <div class="flex flex-col gap-4 p-6">
+            <!-- Breadcrumb & back link -->
+            <div class="flex justify-between items-start">
+                <p class="text-[14px] font-normal">
+                    <span class="text-[#898989]">→ </span>
+                    <a href="#" class="text-[#898989] underline">Кастомные блоки для тильды</a>
+                    <span class="text-[#898989]"> → </span>
+                    <span class="text-[#222]">Как добавить любой слайдер на Тильду</span>
+                </p>
+                <a href="../index.html" class="text-[14px] text-[#2D2D2D] font-normal whitespace-nowrap">← Вернуться на
+                    главную</a>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center px-4 py-1 bg-gradient-to-r from-[#00FFC4] to-[#00BBFF] text-white text-sm italic font-medium tracking-tight ">Чтение: 3 мин</span>
+                <span class="inline-flex items-center justify-center px-4 py-1 bg-gradient-to-r from-[#00FFC4] to-[#00BBFF] text-white text-sm italic font-medium tracking-tight ">Для разработчиков и дизайнеров</span>
+            </div>
+
+            <!-- Title -->
+            <div class="flex flex-col  ">
+                <h1 class="text-[32px] font-bold text-[#212529] tracking-[-0.96px]">
+                    Полное руководство: как добавить любой слайдер на Тильду с помощью браузерного расширения
+                </h1>
+                <p class="text-[20px] font-medium text-[#222] tracking-[-0.4px]">
+                    Уникальный слайдер через браузерное расширение
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+        <!-- What you'll get -->
+        <div class="p-6 flex flex-col gap-2  ">
+            <h2 class="text-[32px] font-bold text-[#212529] tracking-[-0.96px]">Что вы получите после установки
+                расширения?</h2>
+            <ul class="    text-[#222]   list-none font-medium text-[20px] leading-[120%] tracking-[-0.02em]">
+                <li>- Готовые слайдеры без Zero Block</li>
+                <li>- Автоматическая вставка кода</li>
+                <li>- Поддержка обновлений</li>
+            </ul>
+        </div>
+
+        <!--    <div class="w-full h-[1px] bg-[#A6A6A6]"></div> -->
+
+        <!-- How to add -->
+        <div class="p-6 flex flex-col items-center gap-8">
+            <!-- Section heading -->
+            <div class="flex flex-col gap-1 w-full">
+                <h2 class="text-[32px] font-bold text-[#212529] tracking-[-0.96px]">
+                    Как добавить любой кастомный слайдер на Тильду за пару кликов.
+                </h2>
+                <p class="text-[20px] font-medium text-[#222] tracking-[-0.4px]">
+                    Три шага. Три минуты. Ваш слайдер готов
+                </p>
+            </div>
+
+            <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+            <!-- Step 1 -->
+            <div class="flex flex-col gap-6 w-full">
+                <h3 class="text-[24px] font-semibold text-[#212529] tracking-[-0.72px]">
+                    Шаг 1: Регистрация, подписка и установка инструмента
+                </h3>
+                <div class="flex justify-between items-center gap-6">
+                    <p class="text-[16px] font-medium text-[#222] tracking-[-0.32px] max-w-[512px] leading-[120%]">
+                        Это займёт 3 минуты и откроет доступ ко всему функционалу.<br><br>
+                        1. Создайте аккаунт на нашем сайте и активируйте пробный период или купите подписку. Ваша
+                        поддержка напрямую помогает нам разрабатывать новые, современные шаблоны слайдеров и делать
+                        продукт лучше.<br><br>
+                        2. Установите наше расширение из официального магазина вашего браузера (совместимо с Chrome,
+                        Edge, Яндекс.Браузер и другими). После установки войдите в него под только что созданным
+                        аккаунтом.
+                    </p>
+                    <div class="w-[1px] bg-[#A6A6A6] self-stretch"></div>
+                    <div class="flex w-[548px] min-h-[280px] justify-center items-center rounded-[8px] bg-[#D9D9D9] text-black font-montserrat text-center p-4 h-[351px] flex-shrink-0 font-medium text-[20px] leading-[100%] tracking-[-0.02em]">
+                        ФОТКА СПАСИБА ЗА ОПЛАТУ
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe banner -->
+            <div class="flex justify-between items-end w-full p-6 rounded-lg border border-black/15 bg-[#E9F5FF] overflow-hidden">
+                <div class="flex flex-col gap-2 max-w-[676px]">
+                    <h3 class="text-[24px] font-semibold text-[#212529] tracking-[-0.48px]">
+                        Подпишитесь на наши соц-сети, чтобы быть в курсе новостей первыми.
+                    </h3>
+                    <p class="text-[16px] font-medium text-[#6C757D] tracking-[-0.32px]">
+                        Первыми получайте анонсы новых готовых решений, уникальные сниппеты кода и лайфхаки по обходу
+                        ограничений Tilda.
+                    </p>
+                </div>
+                <button class="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-[#007AFF] text-white text-[14px] font-medium tracking-[-0.28px] shrink-0">
+                    Подробнее→
+                </button>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col gap-8 w-full">
+                <h3 class="text-[24px] font-semibold text-[#212529] tracking-[-0.72px] leading-[100%]">
+                    Шаг 2: Создайте zero-block на тильде и разместите ваши фото
+                </h3>
+                <div class="flex justify-between items-center gap-6" style="height:343px">
+                    <div class="flex flex-col gap-4 max-w-[512px]">
+                        <p class="text-[16px] font-medium text-[#222] tracking-[-0.32px] leading-[120%]">
+                            Создайте Zero‑Block и разместите в нём фотографии для слайдера в любом порядке — для
+                            красивого вида советуем выровнять их в ряд. Сохраните блок, активируйте наше расширение и
+                            наведите курсор на добавленные изображения, чтобы сохранить их URL.
+                        </p>
+                        <div class="flex p-[15px] items-center rounded-[8px] bg-[rgba(255,225,0,0.35)] gap-[12px]">
+                            <div class="flex flex-col gap-2">
+                                <h4 class="text-[24px] font-semibold text-[#212529] tracking-[-0.72px]">
+                                    Рекомендация:</h4>
+                                <p class="text-[16px] font-medium text-[#222] tracking-[-0.32px] leading-[120%]">
+                                    Загружайте фотографии одного размера и в формате JPG/WEBP — это поможет сайту
+                                    работать быстрее.
+                                </p>
+                            </div>
+                            <span class="text-4xl shrink-0"><img src="../src/assets/img/icons/attention.png"
+                                                                 alt="attention"></span>
+                        </div>
+                    </div>
+                    <div class="w-[1px] bg-[#A6A6A6] self-stretch"></div>
+                    <div class="flex w-[548px] min-h-[280px] justify-center items-center rounded-[8px] bg-[#D9D9D9] text-black font-montserrat text-center p-4 h-[351px] flex-shrink-0 font-medium text-[20px] leading-[100%] tracking-[-0.02em]">
+                        ФОТКА ГДЕ С ПОМОЩЬЮ РАСШИРЕНИЯ КОПИРУЕМ URL
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+            <!-- Slider type selector -->
+            <div class="w-full">
+                <h3 class="text-[32px] font-bold text-[#212529] tracking-[-0.96px] mb-6">
+                    Выберите слайдер который хотите добавить на ваш сайт:
+                </h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Одиночный слайдер
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Мульти-слайдер
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Адаптивный слайдер
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Fade слайдер
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Слайдер с разной шириной
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        С адаптивной высотой
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        С ленивой загрузкой
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Центрированный режим
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Синхронизированные слайдеры
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-gradient-to-r from-[#00FFC3] to-[#00BBFF] text-white text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Слайдеры
+                    </button>
+                    <button class="inline-flex justify-center items-center px-10 py-[10px] rounded-[8px] bg-[#E8E8E8] text-black text-[16px] font-semibold font-montserrat tracking-[-0.0175em] border-0 cursor-pointer hover:opacity-85 active:opacity-85">
+                        Скоро добавим ещё больше слайдеров!
+                    </button>
+                </div>
+
+                <!-- URL input area -->
+                <div class="flex gap-2 mb-2 mt-6">
+                    <input class="w-full   bg-[#00BBFF26]   rounded-[8px] p-[10px] font-montserrat text-[14px] resize-y placeholder:text-[#57A5FF]"
+                           placeholder="Вставьте Url вашего фото сюда" rows="1"></input>
+                    <button class="px-16 py-3 bg-gradient-to-t  from-[#00E6C0] to-[#00E6C0] text-white border-0 rounded-[8px] font-montserrat text-[14px] font-medium cursor-pointer whitespace-nowrap">
+                        Добавить
+                    </button>
+                </div>
+
+                <textarea
+                        class="w-full  min-h-[220px]  bg-[#00BBFF26]   rounded-[8px] p-[10px] font-montserrat text-[14px] resize-y placeholder:text-[#57A5FF]"
+                        rows="1"></textarea>
+
+                <button class="px-16 py-3   text-white border-0 rounded-[8px] font-montserrat text-[14px] font-medium cursor-pointer bg-gradient-to-r from-[#E60026] to-[#C20020]">
+                    Очистить
+                </button>
+            </div>
+
+
+            <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+            <!-- Add arrows toggle -->
+            <div class="w-full flex flex-col gap-4">
+
+                <label class="flex items-center  space-x-2 cursor-pointer">
+                    <!-- Checkbox -->
+                    <input type="radio"
+                           class="w-10 h-10 text-blue-600 border-[#57A5FF] bg-gray-100  rounded-full  ">
+                    <!-- Text -->
+                    <span class="text-[32px] font-bold text-[#212529] tracking-[-0.96px] ">Добавить стрелки</span>
+                </label>
+                <div class="">
+                    <div class="flex gap-2 mb-2 mt-6">
+                        <input class="w-full   bg-[#00BBFF26]   rounded-[8px] p-[10px] font-montserrat text-[14px] resize-y placeholder:text-[#57A5FF]"
+                               placeholder="Вставьте Url вашего фото сюда" rows="1"></input>
+                        <button class="px-16 py-3 bg-gradient-to-t  from-[#00E6C0] to-[#00E6C0] text-white border-0 rounded-[8px] font-montserrat text-[14px] font-medium cursor-pointer whitespace-nowrap">
+                            Добавить
+                        </button>
+                    </div>
+
+                    <textarea
+                            class="w-full  min-h-[130px]  bg-[#00BBFF26]   rounded-[8px] p-[10px] font-montserrat text-[14px] resize-y placeholder:text-[#57A5FF]"
+                            rows="1"></textarea>
+
+                </div>
+
+            </div>
+            <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+            <!-- Arrow settings (own) -->
+            <div class="w-full">
+                <h3 class="text-[32px] font-semibold text-[#212529] tracking-[-0.96px] mb-6 ">
+                    Настройки стрелок (если есть своя)
+                </h3>
+                <div class="grid grid-cols-3 gap-x-12 gap-y-4">
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Размер иконки
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Размер иконки на мобиле
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Непрозрачность
+                            фона</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Непрозрачность фона при
+                            наведении</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">При наведении
+                            увеличение</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Отступ стрелок/бока
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+
+            <!-- Standard arrow settings -->
+            <div class="w-full">
+                <h3 class="text-[32px] font-semibold text-[#212529] tracking-[-0.96px] mb-6">
+                    Стандартная стрелка (если нет своей)
+                </h3>
+                <div class="grid grid-cols-3 gap-x-20 gap-y-4">
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Размер стрелки
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Размер стрелки на
+                            мобиле (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Размер иконки
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Размер иконки на мобиле
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Строгий цвет</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Цвет при
+                            наведении</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Стрелки цвет
+                            фона</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Цвет фона при
+                            наведении</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Непрозрачность
+                            фона</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Непрозрачность фона при
+                            наведении</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">При наведении
+                            увеличение</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-3 py-2 font-montserrat text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+
+            <!-- Add dots toggle -->
+            <div class="w-full   -mt-2">
+                <label class="flex items-center  space-x-2 cursor-pointer">
+                    <!-- Checkbox -->
+                    <input type="radio"
+                           class="w-10 h-10 text-blue-600 border-[#57A5FF] bg-gray-100   rounded-full  ">
+                    <!-- Text -->
+                    <span class="text-[32px] font-bold text-[#212529] tracking-[-0.96px] ">Добавить точки</span>
+                </label>
+            </div>
+
+
+            <!-- Dots pagination settings -->
+            <div class="w-full">
+                <h3 class="font-semibold text-[24px] leading-[100%] tracking-[-0.03em] mb-6">
+                    Настройки точек пагинации
+                </h3>
+                <div class="grid grid-cols-3 gap-x-12 gap-y-4">
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Размер точки
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Цвет фона</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Цвет фона активной
+                            точки</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Увеличение активной
+                            точки</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Отступ между собой
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Отступ снизу
+                            (px)</label>
+                        <input type="text"
+                               class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]"
+                               placeholder="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+
+            <!-- Animation settings -->
+            <div class="w-full -mt-2">
+                <h3 class="text-[32px] font-bold text-[#212529] tracking-[-0.96px] mb-6">
+                    Настройки анимации слайдов
+                </h3>
+                <div class="grid grid-cols-2 gap-16 mb-4">
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Скорость анимации
+                            (мс)</label>
+                        <input type="text" class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]" placeholder="">
+                    </div>
+                    <div>
+                        <label class="font-medium text-[16px] leading-[100%] tracking-[-0.02em]">Авто-пролистование
+                            (мс)</label>
+                        <input type="text" class="w-full h-[56px] border border-[#57A5FF] rounded-[8px] px-[12px] py-[8px] font-['Montserrat',sans-serif] text-[14px] text-[#222] mt-[6px]" placeholder="">
+                    </div>
+                </div>
+
+
+                <div class="flex flex-col gap-3 mt-8">
+                    <div class="flex items-center gap-[8px] font-['Montserrat',sans-serif] text-[16px] font-medium text-[#222] cursor-pointer">
+                        <div onclick="toggleActive(this)"
+                             class="mr-3 w-[60px] p-2 h-[29px] rounded-[8px] border-[0.96px] border-[#57A5FF] opacity-100"></div>
+                        Не автопролистовать, если на слайдере наведена мышка
+                    </div>
+                    <div class="flex items-center gap-[8px] font-['Montserrat',sans-serif] text-[16px] font-medium text-[#222] cursor-pointer">
+                        <div onclick="toggleActive(this)"
+                             class="mr-3 w-[60px] h-[29px] rounded-[8px] border-[0.96px] border-[#57A5FF] opacity-100"></div>
+                        Отключить автопролистывание на мобиле
+                    </div>
+                    <div class="flex items-center gap-[8px] font-['Montserrat',sans-serif] text-[16px] font-medium text-[#222] cursor-pointer">
+                        <div onclick="toggleActive(this)"
+                             class="mr-3 w-[60px] h-[29px] rounded-[8px] border-[0.96px] border-[#57A5FF] opacity-100"></div>
+                        Включить свайп мышкой на ПК версии
+                    </div>
+                    <div
+                            class="flex items-center gap-[8px] font-['Montserrat',sans-serif] text-[16px] font-medium text-[#222] cursor-pointer">
+                        <div onclick="toggleActive(this)"
+                             class="mr-3 w-[60px] h-[29px] rounded-[8px] border-[0.96px] border-[#57A5FF] opacity-100"></div>
+                        Отключить свайп на мобиле
+                    </div>
+                    <div class="flex items-center gap-[8px] font-['Montserrat',sans-serif] text-[16px] font-medium text-[#222] cursor-pointer">
+                        <div onclick="toggleActive(this)"
+                             class="mr-3 w-[60px] h-[29px] rounded-[8px] border-[0.96px] border-[#57A5FF] opacity-100"></div>
+                        Не автопролистовать, если на слайдере наведена мышка
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Slider preview -->
+            <div class="w-full  flex flex-col items-center gap-4">
+                <div class="flex items-center justify-center h-[608px] rounded-[8px] gap-[15px] p-6 opacity-100 w-full bg-[#3C3C3C26]"
+                     aria-label="Предпросмотр слайдера">
+                    <p class="font-medium text-[24px] leading-[100%] tracking-[0em]">Пример слайдера как он выглядит</p>
+
+                </div>
+                <button class="block mt-4 mx-auto px-8 py-[10px] bg-[#D9D9D9] border border-[#D9D9D9] rounded-[16px] font-montserrat text-[14px] font-medium text-[#000000] cursor-pointer">
+                    Попробуй код
+                </button>
+            </div>
+        </div>
+
+        <div class="w-full h-[1px] bg-[#A6A6A6]"></div>
+
+
+        <!-- Donation Section -->
+        <section class="px-6 my-8">
+            <div class="border-[1.28px] border-[solid] border-[#d9d9d9] rounded-[8px] px-[37px] py-[25px] flex relative">
+                <div class="flex flex-col justify-between gap-8 items-start">
+                    <h2 class="font-semibold text-[32px] text-[#212529]">Поддержать проект</h2>
+                    <p class="font-normal text-[20px] text-[#222]">Если статья помогла — вы можете поблагодарить
+                        любой
+                        <br> суммой. Это мотивирует писать больше таких гайдов!</p>
+                    <form>
+                        <fieldset class="flex gap-[7px] font-normal text-[24px] text-[#000]">
+                            <legend class="sr-only">Выберите сумму поддержки</legend>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="100" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        100 ₽
+                      </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="300" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        300 ₽
+                      </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="500" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        500 ₽
+                      </span>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="amount" value="custom" class="peer sr-only">
+                                <span class="rounded-[12px] px-[36px] py-[12px] bg-[#ededed] peer-checked:bg-[linear-gradient(90deg,_#00ffc3_0%,_#0bf_100%)]">
+                        Своя сумма
+                      </span>
+                            </label>
+                        </fieldset>
+                    </form>
+                    <a class="rounded-[12px] px-[36px] py-[12px] font-medium text-[24px] text-[#fff] bg-black"
+                       href="#">Поблагодарить</a>
+                </div>
+                <div>
+                    <img class="absolute right-[-63px] h-[80%]" src="../src/assets/img/ill/heart.png" alt="heart">
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="py-[55px] bg-white shadow-[0_-150px_42px_0_rgba(0,0,0,0.00),0_-96px_38px_0_rgba(0,0,0,0.01),0_-54px_32px_0_rgba(0,0,0,0.03),0_-24px_24px_0_rgba(0,0,0,0.04),0_-6px_13px_0_rgba(0,0,0,0.05)]">
+    <div class="mx-auto max-w-[1236px]">
+        <div class="flex justify-between w-full max-w-[1200px] mx-auto">
+            <section class="flex flex-col items-start gap-4 font-light text-[14px] px-[64px] border-r border-[#D9D9D9]">
+                <img src="../src/assets/img/icons/versent.svg" alt="Versent">
+                <p class="text-black">© 2025 Versent. <br> Все права защищены.</p>
+                <p class="text-[#6C757D]">Icons by Icons8</p>
+            </section>
+            <section class="px-[64px] border-r border-[#D9D9D9]">
+                <h2 class="font-medium text-[18px] text-[#222] mb-4 tracking-[-0.72px]">Навигация</h2>
+                <nav>
+                    <ul class="text-[14px] text-black font-light flex flex-col gap-1">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Модификации</a></li>
+                        <li><a href="#">Документация</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="px-[64px] border-r border-[#D9D9D9]">
+                <h2 class="font-medium text-[18px] text-[#222] mb-4 tracking-[-0.72px]">Кастомные блоки</h2>
+                <ul class="text-[14px] text-black font-light flex flex-col gap-1">
+                    <li>Кастомный каталог</li>
+                    <li>Кастомные карточки</li>
+                    <li>Изменения корзины</li>
+                </ul>
+            </section>
+            <section class="px-[64px]">
+                <h2 class="font-medium text-[18px] text-[#222] mb-4 tracking-[-0.72px]">Контакты</h2>
+                <address class="text-[14px] text-black not-italic font-light">
+                    <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                </address>
+            </section>
+        </div>
+    </div>
+</footer>
+<script>
+    function toggleActive(element) {
+        element.classList.toggle('bg-[#57A5FF]');
+        element.classList.toggle('text-white');
+        const checkbox = element.querySelector('input[type="checkbox"]');
+        checkbox.checked = !checkbox.checked;
+    }
+</script>
+<script type="module" src="../src/main.js"></script>
+</body>
+</html>
