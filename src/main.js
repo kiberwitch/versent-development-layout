@@ -49,3 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+function toggleActive(element) {
+    element.classList.toggle('bg-[#57A5FF]');
+    element.classList.toggle('text-white');
+
+    const checkbox = element.querySelector('input[type="checkbox"]');
+    if (checkbox) {
+        checkbox.checked = !checkbox.checked;
+    }
+}
+
+// global qilish
+window.toggleActive = toggleActive;
