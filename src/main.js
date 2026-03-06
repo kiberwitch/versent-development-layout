@@ -63,3 +63,55 @@ function toggleActive(element) {
 
 // global qilish
 window.toggleActive = toggleActive;
+
+
+
+
+// Добавить стрелки radio
+document.addEventListener("DOMContentLoaded", function () {
+
+    const radio = document.getElementById("toggleArrows");
+    const block = document.getElementById("arrowsBlock");
+
+    let active = false;
+
+    radio.addEventListener("click", function () {
+
+        active = !active;
+
+        if (active) {
+            block.classList.remove("hidden");
+        } else {
+            block.classList.add("hidden");
+            radio.checked = false;
+        }
+
+    });
+
+});
+
+
+
+// Добавить точки radio
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dotsRadio = document.getElementById("toggleDots");
+    const dotsBlock = document.getElementById("dotsSettings");
+
+    let dotsActive = false;
+
+    dotsRadio.addEventListener("click", function () {
+
+        dotsActive = !dotsActive;
+
+        if (dotsActive) {
+            dotsBlock.classList.remove("hidden");
+        } else {
+            dotsBlock.classList.add("hidden");
+            dotsRadio.checked = false;
+        }
+
+    });
+
+});
