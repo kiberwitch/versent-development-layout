@@ -115,3 +115,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+//  plan
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Select all locked card overlays
+    const lockedCards = document.querySelectorAll(".block-card .opacity-75.cursor-pointer");
+
+    // 2. Get modal and close button
+    const modal = document.getElementById("tarifModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    // 3. Function to open modal and disable background scroll
+    const openModal = () => {
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden"; // Disable scrolling on body
+    };
+
+    // 4. Function to close modal and restore scroll
+    const closeModal = () => {
+        modal.classList.add("hidden");
+        document.body.style.overflow = ""; // Restore scrolling
+    };
+
+    // 5. Add click event to each locked card to open modal
+    lockedCards.forEach(card => {
+        card.addEventListener("click", openModal);
+    });
+
+    // 6. Close modal when close button is clicked
+    closeBtn.addEventListener("click", closeModal);
+
+    // 7. Close modal if user clicks outside the modal content
+    modal.addEventListener("click", (e) => {
+        if(e.target === modal){
+            closeModal();
+        }
+    });
+});
